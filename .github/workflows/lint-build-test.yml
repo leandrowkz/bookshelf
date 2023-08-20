@@ -14,20 +14,17 @@ jobs:
         with:
           node-version: 19
 
-      - name: Install Yarn
-        run: npm install --global yarn@latest
-
       - name: Install deps
-        run: yarn
+        run: npm install
 
       - name: Typecheck
-        run: yarn lint:typecheck
+        run: npm run lint:typecheck
 
       - name: Lint
-        run: yarn lint:check
+        run: npm run lint:check
 
       - name: Build
-        run: yarn build
+        run: npm run build
 
       - name: Test
-        run: yarn test
+        run: npm run test
