@@ -1,0 +1,33 @@
+name: "Lint, Build, Test"
+on:
+  push:
+    branches-ignore:
+      - main
+jobs:
+  Lint-Build-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 19
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19
+
+      - name: Install Yarn
+        run: npm install --global yarn@latest
+
+      - name: Install deps
+        run: yarn
+
+      - name: Typecheck
+        run: yarn lint:typecheck
+
+      - name: Lint
+        run: yarn lint:check
+
+      - name: Build
+        run: yarn build
+
+      - name: Test
+        run: yarn test

@@ -1,6 +1,6 @@
-import { Page } from "@/components";
-import { useMockData } from "../../test-utils/hooks/useMockData";
-import { BookCarousel } from "@/components/BookCarousel/BookCarousel";
+import { Page } from '@/components'
+import { useMockData } from '../../test-utils/hooks/useMockData'
+import { BookCarousel } from '@/components/BookCarousel/BookCarousel'
 
 export default function HomePage() {
   const { books } = useMockData()

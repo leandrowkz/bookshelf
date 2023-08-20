@@ -1,6 +1,6 @@
-import { Title } from "@mantine/core";
-import Link from "next/link";
-import { useStyles } from "./BookshelfieLogo.styles";
+import { Title } from '@mantine/core'
+import Link from 'next/link'
+import { useStyles } from './BookshelfieLogo.styles'
 
 export function BookshelfieLogo() {
   const { classes } = useStyles()
