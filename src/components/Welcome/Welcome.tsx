@@ -1,8 +1,8 @@
-import { Title, Text, Anchor } from '@mantine/core';
-import useStyles from './Welcome.styles';
+import { Title, Text, Anchor } from '@mantine/core'
+import useStyles from './Welcome.styles'
 
 export function Welcome() {
-  const { classes } = useStyles();
+  const { classes } = useStyles()
 
   return (
     <>
@@ -21,5 +21,5 @@ export function Welcome() {
         . To get started edit index.tsx file.
       </Text>
     </>
-  );
+  )
 }

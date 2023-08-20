@@ -1,13 +1,13 @@
-import { Text, Container, ActionIcon, Group, Box } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
-import { useMenuLinks } from "@/hooks/useMenuLinks";
-import { useStyles } from "./Footer.styles";
-import { BookshelfieLogo } from '../BookshelfieLogo/BookshelfieLogo';
-import Link from 'next/link';
+import { Text, ActionIcon, Group, Box } from '@mantine/core'
+import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react'
+import { useMenuLinks } from '@/hooks/useMenuLinks'
+import { useStyles } from './Footer.styles'
+import { BookshelfieLogo } from '../BookshelfieLogo/BookshelfieLogo'
+import Link from 'next/link'
 
 export function Footer() {
-  const { classes } = useStyles();
-  const { footer } = useMenuLinks();
+  const { classes } = useStyles()
+  const { footer } = useMenuLinks()
 
   const groups = footer.map((group) => {
     const links = group.links.map((link, index) => (
@@ -20,15 +20,15 @@ export function Footer() {
       >
         {link.label}
       </Text>
-    ));
+    ))
 
     return (
       <div className={classes.wrapper} key={group.title}>
         <Text className={classes.title}>{group.title}</Text>
         {links}
       </div>
-    );
-  });
+    )
+  })
 
   return (
     <footer className={classes.footer}>
@@ -60,5 +60,5 @@ export function Footer() {
         </Group>
       </Box>
     </footer>
-  );
+  )
 }

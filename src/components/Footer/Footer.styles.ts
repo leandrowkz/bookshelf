@@ -1,4 +1,4 @@
-import { createStyles, rem } from '@mantine/core';
+import { createStyles, rem } from '@mantine/core'
 
 export const useStyles = createStyles((theme) => ({
   footer: {
@@ -95,4 +95,4 @@ export const useStyles = createStyles((theme) => ({
       marginTop: theme.spacing.xs,
     },
   },
-}));
+}))

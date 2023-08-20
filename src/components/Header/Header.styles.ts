@@ -1,4 +1,4 @@
-import { createStyles, rem } from '@mantine/core';
+import { createStyles, rem } from '@mantine/core'
 
 export const useStyles = createStyles((theme) => ({
   mantineHeader: {
@@ -59,4 +59,4 @@ export const useStyles = createStyles((theme) => ({
       color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
     },
   },
-}));
+}))

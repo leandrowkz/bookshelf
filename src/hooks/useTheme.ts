@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google'
-import { MantineThemeOverride } from "@mantine/core";
+import { type MantineThemeOverride } from '@mantine/core'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,10 +24,10 @@ const theme: MantineThemeOverride = {
   defaultRadius: 'md',
   components: {
     Button: {
-      defaultProps: { size: 'md' }
+      defaultProps: { size: 'md' },
     },
     ActionIcon: {
-      defaultProps: { size: 'md' }
+      defaultProps: { size: 'md' },
     },
     Title: {
       styles: {
@@ -36,11 +36,11 @@ const theme: MantineThemeOverride = {
             margin: 0,
             marginBlock: '0 !important',
           },
-        }
-      }
-    }
+        },
+      },
+    },
   },
-  globalStyles: (theme) => ({
+  globalStyles: () => ({
     'h1, h2, h3, h4, h5, h6': {
       margin: 0,
     },

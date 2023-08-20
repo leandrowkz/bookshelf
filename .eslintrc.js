@@ -1,25 +1,3 @@
-// module.exports = {
-//   extends: [
-//     'mantine',
-//     'plugin:@next/next/recommended',
-//     'plugin:jest/recommended',
-//     'plugin:storybook/recommended',
-//   ],
-//   plugins: ['testing-library', 'jest'],
-//   overrides: [
-//     {
-//       files: ['**/?(*.)+(spec|test).[jt]s?(x)'],
-//       extends: ['plugin:testing-library/react'],
-//     },
-//   ],
-//   parserOptions: {
-//     project: './tsconfig.json',
-//   },
-//   rules: {
-//     'react/react-in-jsx-scope': 'off',
-//   },
-// };
-
 /* eslint-disable no-undef */
 /** @type {import('eslint').ESLint.ConfigData} */
 
@@ -30,6 +8,7 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
+    'plugin:@next/next/recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
@@ -52,6 +31,7 @@ module.exports = {
     'spaced-comment': 'error',
     'no-duplicate-imports': 'error',
     '@typescript-eslint/no-empty-interface': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/consistent-type-imports': [
       'error',
       {
@@ -65,19 +45,19 @@ module.exports = {
         format: ['UPPER_CASE'],
       },
     ],
-    'no-restricted-imports': [
-      'error',
-      {
-        paths: [
-          {
-            name: '@testing-library/react',
-            importNames: ['render', 'screen'],
-            message:
-              "Import testing functions from useTesting() hook instead.\n\nUsage:\nimport { useTesting } from 'src/hooks/useTesting'\nconst { renderComponent, screen, user } = useTesting()\n",
-          },
-        ],
-      },
-    ],
+    // 'no-restricted-imports': [
+    //   'error',
+    //   {
+    //     paths: [
+    //       {
+    //         name: '@testing-library/react',
+    //         importNames: ['render', 'screen'],
+    //         message:
+    //           "Import testing functions from useTesting() hook instead.\n\nUsage:\nimport { useTesting } from 'src/hooks/useTesting'\nconst { renderComponent, screen, user } = useTesting()\n",
+    //       },
+    //     ],
+    //   },
+    // ],
   },
 }
 
