@@ -2,7 +2,7 @@ import { Text, ActionIcon, Group, Box } from '@mantine/core'
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react'
 import { useMenuLinks } from '@/hooks/useMenuLinks'
 import { useStyles } from './Footer.styles'
-import { BookshelfieLogo } from '../BookshelfieLogo/BookshelfieLogo'
+import { BookshelfLogo } from '../BookshelfLogo/BookshelfLogo'
 import Link from 'next/link'
 
 export function Footer() {
@@ -34,7 +34,7 @@ export function Footer() {
     <footer className={classes.footer}>
       <Box className={classes.inner}>
         <div className={classes.logo}>
-          <BookshelfieLogo />
+          <BookshelfLogo />
           <Text size="xs" color="dimmed" className={classes.description}>
             Your personal book catalog. With love, for free.
           </Text>
@@ -43,7 +43,7 @@ export function Footer() {
       </Box>
       <Box className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
-          © {new Date().getFullYear()} Bookshelfie. Made with 💜 by{' '}
+          © {new Date().getFullYear()} Bookshelf. Made with 💜 by{' '}
           <Link href="https://github.com/leandrowkz">@leandrowkz</Link>.
         </Text>
 

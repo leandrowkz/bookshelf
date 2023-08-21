@@ -3,7 +3,7 @@ import { Header as MantineHeader, Group, Burger, Button, Box } from '@mantine/co
 import { useDisclosure } from '@mantine/hooks'
 import { useStyles } from './Header.styles'
 import Link from 'next/link'
-import { BookshelfieLogo } from '@/components/BookshelfieLogo/BookshelfieLogo'
+import { BookshelfLogo } from '@/components/BookshelfLogo/BookshelfLogo'
 import { ColorSchemeToggle } from '../ColorSchemaToggle/ColorSchemaToggle'
 import { useMenuLinks } from '@/hooks/useMenuLinks'
 
@@ -29,7 +29,7 @@ export function Header() {
       <Box className={classes.inner}>
         <Burger opened={opened} onClick={toggle} size="sm" className={classes.burger} />
 
-        <BookshelfieLogo />
+        <BookshelfLogo />
 
         <Group className={classes.links} spacing={5}>
           {items}
