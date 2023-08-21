@@ -1,5 +1,5 @@
 # 📚 Bookshelf
-Bookshelf is an opensource books catalog, where users can favorite their books, mark as read or add them to a want to read list. Take a look at this project running on https://usebookshelf.app or https://bookshelf.guide.
+Bookshelf is an opensource books catalog, where users can favorite their books, mark as read or add them to a want to read list. Take a look at this project running on https://usebookshelf.app (or https://bookshelf.guide).
 
 <!-- ![Movieshelf showcase](./docs/movieshelf.jpeg) -->
 
