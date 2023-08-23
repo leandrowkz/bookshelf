@@ -25,7 +25,12 @@
       "@/test-utils/*": [
         "./test-utils/*"
       ]
-    }
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
