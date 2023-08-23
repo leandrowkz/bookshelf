@@ -20,12 +20,13 @@ export type SearchPayload = {
   startIndex?: number
 }
 
-export type VolumesResponse = {
-  kind: 'books#volumes'
-  items: Volume[]
-  totalItems: number
-}
-
+/**
+ * A Volume represents information that Google Books hosts about a book or a magazine. It contains
+ * metadata, such as title and author, as well as personalized data, such as whether or not it has
+ * been purchased. (Volume fields that are available in LITE projection are noted below).
+ *
+ * @see https://developers.google.com/books/docs/v1/reference/volumes
+ */
 export type Volume = {
   kind: 'books#volume'
   id: string
@@ -130,4 +131,10 @@ type AccessInfo = {
 
 type SearchInfo = {
   textSnippet: string
+}
+
+export type VolumesResponse = {
+  kind: 'books#volumes'
+  items: Volume[]
+  totalItems: number
 }
