@@ -1,5 +1,5 @@
 import type { Author } from './Author'
-import type { BookMetadata } from './BookMetadata'
+// import type { BookMetadata } from './BookMetadata'
 
 export type Book = {
   id: string
@@ -13,5 +13,6 @@ export type Book = {
   publishedAt: Nullable<string>
   pageCount: Nullable<number>
   language: LanguageCode
-  metadata: BookMetadata
+  rating: Nullable<number>
+  // metadata: BookMetadata
 }

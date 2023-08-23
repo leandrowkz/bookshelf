@@ -5,7 +5,22 @@ declare global {
 
   type Falsable<T> = T | false
 
-  export type CountryCode =
+  type BooksProvider = 'google-books' | 'open-library'
+
+  type RequestPayload = {
+    path: string
+    method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'OPTIONS'
+    body?: RequestBody
+    params?: RequestQuery
+  }
+
+  type RequestQuery = Record<string, string | boolean | number | null>
+
+  type RequestHeaders = Record<string, string | boolean | number>
+
+  type RequestBody = Record<string, string | boolean | number | object | null>
+
+  type CountryCode =
     | 'AD'
     | 'AE'
     | 'AF'
@@ -256,7 +271,7 @@ declare global {
     | 'ZM'
     | 'ZW'
 
-  export type LanguageCode =
+  type LanguageCode =
     | 'aa'
     | 'ab'
     | 'ae'
