@@ -20,6 +20,8 @@ declare global {
 
   type RequestBody = Record<string, string | boolean | number | object | null>
 
+  type RequestParamsWithId = { params: { id: string } }
+
   type CountryCode =
     | 'AD'
     | 'AE'

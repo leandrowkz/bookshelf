@@ -1,13 +1,14 @@
 import { configureStore, type ThunkAction, type Action } from '@reduxjs/toolkit'
 import { createWrapper } from 'next-redux-wrapper'
-import { slice } from '@/store/book-details/slice'
+import { apiSlice } from '@/store/api'
 
 const makeStore = () =>
   configureStore({
-    reducer: {
-      [slice.name]: slice.reducer,
-    },
     devTools: true,
+    reducer: {
+      [apiSlice.reducerPath]: apiSlice.reducer,
+    },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(apiSlice.middleware),
   })
 
 export type AppStore = ReturnType<typeof makeStore>
