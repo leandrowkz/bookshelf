@@ -2,8 +2,8 @@ import { createStyles } from '@mantine/core'
 
 export const useStyles = createStyles((theme) => ({
   link: {
-    '&, &:visited': {
-      color: theme.colors.violet[9],
+    '&, &:visited, &:hover, &:active': {
+      color: theme.colorScheme === 'light' ? theme.black : theme.white,
       textDecoration: 'none',
     },
   },

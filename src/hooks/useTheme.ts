@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google'
-import { type MantineThemeOverride } from '@mantine/core'
+import { rem, type MantineThemeOverride } from '@mantine/core'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -45,6 +45,9 @@ const theme: MantineThemeOverride = {
       margin: 0,
     },
   }),
+  other: {
+    headerHeight: rem(90),
+  },
 }
 
 export const useTheme = () => ({ theme })

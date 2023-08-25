@@ -1,4 +1,4 @@
-import { createStyles, rem } from '@mantine/core'
+import { createStyles } from '@mantine/core'
 
 export const useStyles = createStyles((theme) => ({
   page: {
@@ -11,7 +11,7 @@ export const useStyles = createStyles((theme) => ({
   content: {
     paddingBlock: theme.spacing.lg,
     paddingInline: theme.spacing.xl,
-    paddingTop: `calc(calc(${theme.spacing.lg} + ${rem(100)}) * 1.2)`,
+    paddingTop: `calc(calc(${theme.spacing.lg} + ${theme.other.headerHeight}) * 1.2)`,
     maxWidth: '100%',
   },
 }))
