@@ -1,13 +1,13 @@
 import { NextResponse } from 'next/server'
 import { useBooksProvider } from '@/app/hooks/useBooksProvider'
-import type { SearchPayload } from '@/app/providers/google-books'
 
 export async function GET(request: Request) {
-  const { search } = useBooksProvider('google-books')
+  const { searchBooks } = useBooksProvider('google-books')
 
-  const params = Object.fromEntries(new URL(request.url).searchParams)
+  const { searchParams } = new URL(request.url)
+  const search = String(searchParams.get('search'))
 
-  const results = await search(params as unknown as SearchPayload)
+  const results = await searchBooks({ search })
 
   return NextResponse.json(results)
 }

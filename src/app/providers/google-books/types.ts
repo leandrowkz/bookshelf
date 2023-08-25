@@ -1,15 +1,9 @@
-import type { search } from './actions/search'
-
-export type GoogleBooksProvider = {
-  search: typeof search
-}
-
 /**
  * Payload type for search on google books API.
  *
  * @see https://developers.google.com/books/docs/v1/reference/volumes/list#parameters
  */
-export type SearchPayload = {
+export type GoogleBooksSearchPayload = {
   q: string
   filter?: 'ebooks' | 'free-ebooks' | 'full' | 'paid-ebooks' | 'partial'
   download?: 'epub'
