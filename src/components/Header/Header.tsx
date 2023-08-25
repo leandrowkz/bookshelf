@@ -11,7 +11,7 @@ export function Header() {
   const { header } = useMenuLinks()
   const [opened, { toggle }] = useDisclosure(false)
   // const [active, setActive] = useState(header[0].link);
-  const { classes, cx } = useStyles()
+  const { classes, cx, theme } = useStyles()
 
   const items = header.map((link) => (
     <Link
@@ -25,7 +25,7 @@ export function Header() {
   ))
 
   return (
-    <MantineHeader height={100} className={classes.mantineHeader}>
+    <MantineHeader height={theme.other.headerHeight} className={classes.mantineHeader}>
       <Box className={classes.inner}>
         <Burger opened={opened} onClick={toggle} size="sm" className={classes.burger} />
 

@@ -2,7 +2,7 @@ import { createStyles, rem } from '@mantine/core'
 
 export const useStyles = createStyles((theme) => ({
   mantineHeader: {
-    height: rem(100),
+    height: theme.other.headerHeight,
     position: 'fixed',
   },
 
@@ -10,7 +10,7 @@ export const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: rem(100),
+    height: theme.other.headerHeight,
     paddingInline: theme.spacing.xl,
 
     [theme.fn.smallerThan('sm')]: {
