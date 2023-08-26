@@ -5,7 +5,7 @@ export const useStyles = createStyles((theme) => ({
     marginTop: rem(120),
     paddingInline: theme.spacing.xl,
     paddingTop: `calc(${theme.spacing.lg} * 2)`,
-    paddingBottom: `calc(${theme.spacing.lg} * 2)`,
+    paddingBottom: theme.spacing.lg,
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
     borderTop: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]

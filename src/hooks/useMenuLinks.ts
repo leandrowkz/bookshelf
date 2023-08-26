@@ -15,65 +15,42 @@ const headerLinks = [
 
 const footerLinks = [
   {
-    title: 'About',
+    title: 'Bookshelf',
     links: [
       {
-        label: 'Features',
-        link: '#',
+        label: 'Home',
+        link: '/',
+        target: '',
       },
       {
-        label: 'Pricing',
-        link: '#',
+        label: 'My lists',
+        link: '/lists',
+        target: '',
       },
       {
-        label: 'Support',
-        link: '#',
+        label: 'Sign in',
+        link: '/sign-in',
+        target: '',
       },
       {
-        label: 'Forums',
-        link: '#',
+        label: 'Sign up',
+        link: '/sign-up',
+        target: '',
       },
     ],
   },
   {
-    title: 'Project',
+    title: 'Social',
     links: [
       {
-        label: 'Contribute',
-        link: '#',
+        label: 'Github',
+        link: 'https://github.com/leandrowkz/bookshelf',
+        target: '_blank',
       },
       {
-        label: 'Media assets',
-        link: '#',
-      },
-      {
-        label: 'Changelog',
-        link: '#',
-      },
-      {
-        label: 'Releases',
-        link: '#',
-      },
-    ],
-  },
-  {
-    title: 'Community',
-    links: [
-      {
-        label: 'Join Discord',
-        link: '#',
-      },
-      {
-        label: 'Follow on Twitter',
-        link: '#',
-      },
-      {
-        label: 'Email newsletter',
-        link: '#',
-      },
-      {
-        label: 'GitHub discussions',
-        link: '#',
+        label: 'Sponsor',
+        link: 'https://github.com/sponsors/leandrowkz',
+        target: '_blank',
       },
     ],
   },

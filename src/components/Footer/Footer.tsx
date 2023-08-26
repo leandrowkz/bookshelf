@@ -1,5 +1,5 @@
-import { Text, ActionIcon, Group, Box } from '@mantine/core'
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react'
+import { Text, Group, Box, Anchor } from '@mantine/core'
+import { IconBrandTwitter, IconBrandLinkedin, IconBrandGithub } from '@tabler/icons-react'
 import { useMenuLinks } from '@/hooks/useMenuLinks'
 import { useStyles } from './Footer.styles'
 import { BookshelfLogo } from '../BookshelfLogo/BookshelfLogo'
@@ -16,7 +16,7 @@ export function Footer() {
         className={classes.link}
         component="a"
         href={link.link}
-        onClick={(event) => event.preventDefault()}
+        target={link.target}
       >
         {link.label}
       </Text>
@@ -47,16 +47,20 @@ export function Footer() {
           <Link href="https://github.com/leandrowkz">@leandrowkz</Link>.
         </Text>
 
-        <Group spacing={0} className={classes.social} position="right" noWrap>
-          <ActionIcon size="lg">
+        <Group spacing="sm" className={classes.social} position="right" noWrap>
+          <Anchor href="https://github.com/leandrowkz" target="_blank" data-testid="icon-github">
+            <IconBrandGithub size="1.05rem" stroke={1.5} />
+          </Anchor>
+          <Anchor
+            href="https://linkedin.com/in/leandrowkz"
+            target="_blank"
+            data-testid="icon-linkedin"
+          >
+            <IconBrandLinkedin size="1.05rem" stroke={1.5} />
+          </Anchor>
+          <Anchor href="https://twitter.com/leandrowkzz" target="_blank" data-testid="icon-twitter">
             <IconBrandTwitter size="1.05rem" stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <IconBrandYoutube size="1.05rem" stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <IconBrandInstagram size="1.05rem" stroke={1.5} />
-          </ActionIcon>
+          </Anchor>
         </Group>
       </Box>
     </footer>
