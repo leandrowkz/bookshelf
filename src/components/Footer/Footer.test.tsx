@@ -1,6 +1,8 @@
-import { render, screen } from '@/test-utils/render'
+import { useRender } from '@/test-utils'
 import { Footer } from './Footer'
 import { useMenuLinks } from '@/hooks/useMenuLinks'
+
+const { screen, render } = useRender()
 
 function getFooterContent() {
   const logo = screen.getByTestId('logo')

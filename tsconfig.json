@@ -24,6 +24,9 @@
       ],
       "@/test-utils/*": [
         "./test-utils/*"
+      ],
+      "@/test-utils": [
+        "./test-utils"
       ]
     },
     "plugins": [

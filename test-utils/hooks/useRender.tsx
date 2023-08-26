@@ -1,12 +1,17 @@
-import { render as testingLibraryRender } from '@testing-library/react'
+import { render as testingLibraryRender, screen } from '@testing-library/react'
 import { MantineProvider } from '@mantine/core'
 
-export { screen } from '@testing-library/react'
-
-export function render(ui: React.ReactNode) {
+function render(ui: React.ReactNode) {
   return testingLibraryRender(<>{ui}</>, {
     wrapper: ({ children }: { children: React.ReactNode }) => (
       <MantineProvider>{children}</MantineProvider>
     ),
   })
+}
+
+export function useRender() {
+  return {
+    render,
+    screen,
+  }
 }

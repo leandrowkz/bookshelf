@@ -1,25 +1,16 @@
 import type { Book } from '@/types/Book'
-import { Image, Text, Flex, Anchor } from '@mantine/core'
-import { useStyles } from './BookItem.styles'
+import { Text, Flex, Anchor } from '@mantine/core'
+import { BookCover } from '../BookCover/BookCover'
 
 export type BookItemProps = {
   book: Book
 }
 
 export function BookItem({ book, ...props }: BookItemProps) {
-  const { classes } = useStyles()
-
   return (
     <Flex {...props} direction="column">
       <Anchor href={`/books/${book.id}`}>
-        <Image
-          src={book.cover}
-          alt={book.title}
-          withPlaceholder
-          className={classes.cover}
-          fit="fill"
-          height="100%"
-        />
+        <BookCover book={book} />
       </Anchor>
 
       <Text weight={500} mt="md" mb="sm">

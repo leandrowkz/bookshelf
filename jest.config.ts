@@ -7,6 +7,7 @@ const config: Config = {
   setupFilesAfterEnv: ['<rootDir>/test-utils/jest.setup.ts'],
   moduleNameMapper: {
     '^@/test-utils/(.*)$': '<rootDir>/test-utils/$1',
+    '^@/test-utils': '<rootDir>/test-utils/index.ts',
     '^@/(.*)$': '<rootDir>/src/$1',
   },
   transform: {
