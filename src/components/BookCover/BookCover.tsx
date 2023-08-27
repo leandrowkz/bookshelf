@@ -8,14 +8,14 @@ export type BookCoverProps = ImageProps & {
 }
 
 export function BookCover({ book, ...props }: BookCoverProps) {
-  const { classes } = useStyles()
+  const { classes, cx } = useStyles()
 
   return (
     <Image
       {...props}
       src={book.cover}
       alt={book.title}
-      className={classes.cover}
+      className={cx(classes.cover, props.className)}
       fit="fill"
       height="100%"
       placeholder={<IconBook size="30%" stroke={1} data-testid="no-cover" />}

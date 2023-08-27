@@ -1,8 +1,9 @@
 import { Carousel, type CarouselProps } from '@mantine/carousel'
-import { Box, Image, useMantineTheme } from '@mantine/core'
+import { Box, useMantineTheme } from '@mantine/core'
 import { useStyles } from './BookCarousel.styles'
 import { useMediaQuery } from '@mantine/hooks'
 import type { Book } from '@/types/Book'
+import { BookItem } from '../BookItem/BookItem'
 
 export type BookCarouselProps = CarouselProps & {
   books: Book[]
@@ -27,14 +28,7 @@ export function BookCarousel({ books, ...props }: BookCarouselProps) {
       >
         {books.map((book) => (
           <Carousel.Slide key={`book-${book.id}`}>
-            <Image
-              src={book.cover as string}
-              radius="md"
-              fit="cover"
-              withPlaceholder
-              width="100%"
-              className={classes.cover}
-            />
+            <BookItem book={book} />
           </Carousel.Slide>
         ))}
       </Carousel>
