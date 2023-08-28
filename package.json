@@ -12,7 +12,7 @@
     "prepare": "husky install",
     "start:dev": "next dev",
     "start:production": "next start",
-    "test": "jest --config ./jest.config.ts"
+    "test": "jest --config ./jest.config.ts --watch"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
