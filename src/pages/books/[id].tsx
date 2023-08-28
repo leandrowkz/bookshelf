@@ -1,6 +1,6 @@
 import { Layout } from '@/components'
 import { useGetBookDetailsQuery } from '@/store/books'
-import { Box, Button, Spoiler, Text, Title } from '@mantine/core'
+import { Box, Button, Flex, Spoiler, Text, Title } from '@mantine/core'
 import { useRouter } from 'next/router'
 import { BookCover } from '@/components/BookCover/BookCover'
 import { useStyles } from './[id].styles'
@@ -57,51 +57,55 @@ export default function Page() {
 
   return (
     <Layout>
-      <Box className={classes.wrapper}>
-        <BookCover book={book} className={classes.cover} radius="lg" />
-        <Box className={classes.actions}>
-          <Button size="lg" leftIcon={<IconPlus />} fullWidth>
-            Add to your lists
-          </Button>
-          <Button size="lg" variant="default" leftIcon={<IconPlayerPlay />} fullWidth>
-            Start reading
-          </Button>
-          <Button size="lg" variant="default" leftIcon={<IconProgressBolt />} fullWidth>
-            Update progress
-          </Button>
-          <Button size="lg" variant="default" leftIcon={<IconHeart />} fullWidth>
-            Favorite
-          </Button>
-        </Box>
-        <Title className={classes.title} order={1}>
-          {book.title}
-        </Title>
-        <Box className={classes.authors}>
-          <Title c="dimmed" order={3}>
+      <Flex className={classes.wrapper}>
+        <Flex className={classes.coverSection}>
+          <BookCover book={book} radius="lg" />
+          <Flex className={classes.actions}>
+            <Button size="lg" leftIcon={<IconPlus />} fullWidth>
+              Add to your lists
+            </Button>
+            <Button size="lg" variant="default" leftIcon={<IconPlayerPlay />} fullWidth>
+              Start reading
+            </Button>
+            <Button size="lg" variant="default" leftIcon={<IconProgressBolt />} fullWidth>
+              Update progress
+            </Button>
+            <Button size="lg" variant="default" leftIcon={<IconHeart />} fullWidth>
+              Favorite
+            </Button>
+          </Flex>
+        </Flex>
+        <Flex className={classes.bookInfoSection}>
+          <Title order={1}>{book.title}</Title>
+          <Title c="dimmed" order={3} className={classes.authors}>
             {getInlineAuthors(book.authors)}
           </Title>
-        </Box>
-        <Box className={classes.metadata}>
-          <Text c="dimmed">{book.categories.join(', ')}</Text>
-          <Text c="dimmed" size="sm">
-            •
-          </Text>
-          <Text c="dimmed">{book.pageCount} pages</Text>
-          <Text c="dimmed" size="sm">
-            •
-          </Text>
-          <Text c="dimmed">{getYearFromDateString(book.publishedAt || '')}</Text>
-        </Box>
-        <Spoiler
-          maxHeight={285}
-          showLabel="Show more"
-          hideLabel="Hide"
-          className={classes.description}
-        >
-          <Text dangerouslySetInnerHTML={{ __html: book.description || '' }} size="lg" />
-        </Spoiler>
-        <DataList list={list} mt="lg" className={classes.listInfo} />
-      </Box>
+          <Box className={classes.metadata}>
+            {book.categories.length && (
+              <>
+                <Text c="dimmed">{book.categories.join(', ')}</Text>
+                <Text c="dimmed" size="sm">
+                  •
+                </Text>
+              </>
+            )}
+            <Text c="dimmed">{book.pageCount} pages</Text>
+            <Text c="dimmed" size="sm">
+              •
+            </Text>
+            <Text c="dimmed">{getYearFromDateString(book.publishedAt || '')}</Text>
+          </Box>
+          <Spoiler
+            maxHeight={275}
+            showLabel="Show more"
+            hideLabel="Hide"
+            className={classes.description}
+          >
+            <Text dangerouslySetInnerHTML={{ __html: book.description || '' }} size="lg" />
+          </Spoiler>
+          <DataList list={list} mt="lg" className={classes.listInfo} />
+        </Flex>
+      </Flex>
       <Box mt="xl">
         {book.authors.map((author) => (
           <>
