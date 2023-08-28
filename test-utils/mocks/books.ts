@@ -1,218 +1,165 @@
-export const books = [
+import type { Book } from '@/types/Book'
+import { authors } from './authors'
+
+export const books: Book[] = [
   {
-    ISBN: 9789000307975,
-    title: 'Vrienden voor het leven',
-    author: 'Maeve Binchy',
-    summary:
-      'Vrienden voor het leven is het verhaal van drie vriendinnen die op weg naar volwassenheid verwikkeld raken in een zonderlinge driehoeksverhouding. Benny en Eve, boezemvriendinnen uit het Ierse dorpje Knockglen, gaan in Dublin studeren en sluiten daar al snel vriendschap met de aantrekkelijke en ambitieuze Nan. Het opwindende studentenleven brengt hun echter niet alleen geluk maar ook verdriet. Met haar grote vermogen om menselijke gevoelens herkenbaar neer te zetten weet Maeve Binchy geluk en verdriet, warmte en humor samen te brengen in deze meeslepende roman. Vrienden voor het leven verscheen voor het eerst in 1991 en is het favoriete boek van vele Maeve Binchy-fans. Het boek is inmiddels toe aan de zeventiende druk. In 1995 werd het zeer succesvol verfilmd onder de titel Circle of Friends met Minnie Driver en Chris O’Donnell in de hoofdrollen.',
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/5/3/6/6/1001004011806635.jpg',
+    id: 'wyeeHB4F6ksC',
+    title: "Barbie's Queer Accessories",
+    description:
+      'This book discusses the history of the Barbie doll and at the cultural reappropriations of Barbie by artists, collectors and especially lesbians and gay men.',
+    publisher: 'Duke University Press',
+    publishedAt: '1995',
+    pageCount: 228,
+    cover:
+      'http://books.google.com/books/content?id=wyeeHB4F6ksC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+    language: 'en',
+    isbn: ['082231620X', '9780822316206'],
+    authors: [authors[1]],
+    categories: ['Social Science'],
+    rating: null,
   },
   {
-    ISBN: 9780552159722,
-    title: 'Deception point',
-    author: 'Dan Brown',
-    summary:
-      'When a new NASA satellite detects evidence of an astonishingly rare object buried deep in the Arctic ice, the floundering space agency proclaims a much-needed victory.. a victory that has profound implications for U.S. space policy and the impending presidential election. With the Oval Office in the balance, the President dispatches White House Intelligence analyst Rachel Sexton to the Arctic to verify the authenticity of the find. Accompanied by a team of experts, including the charismatic academic Michael Tolland, Rachel uncovers the unthinkable - evidence of scientific trickery - a bold deception that threatens to plunge the world into controversy..',
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/8/8/9/8/1001004006878988.jpg',
+    id: 'S4zx7X-9ffoC',
+    title: 'Barbie Culture',
+    description:
+      "This book uses one of the most popular accessories of childhood, the Barbie doll, to explain key aspects of cultural meaning. Some readings would see Barbie as reproducing ethnicity and gender in a particularly coarse and damaging way - a cultural icon of racism and sexism. Rogers develops a broader, more challenging picture. She shows how the cultural meaning of Barbie is more ambiguous than the narrow, appearance-dominated model that is attributed to the doll. For a start, Barbie’s sexual identity is not clear-cut. Similarly her class situation is ambiguous. But all interpretations agree that, with her enormous range of lifestyle `accessories', Barbie exists to consume. Her body is the perfect metaphor of modern times: plastic, st",
+    publisher: 'SAGE',
+    publishedAt: '1999-02-02',
+    pageCount: 188,
+    cover:
+      'http://books.google.com/books/content?id=S4zx7X-9ffoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+    language: 'en',
+    isbn: ['0761958886', '9780761958888'],
+    authors: [authors[2]],
+    categories: ['Social Science'],
+    rating: null,
   },
   {
-    ISBN: 9789022558027,
-    title: 'Magic staff',
-    author: 'Terry Brooks',
-    summary:
-      'Vijf eeuwen geleden werd de wereld door een noodlottige demonenoorlog in de as gelegd. De overlevenden hebben een toevluchtsoord gevonden in een door magie beschermde vallei, maar nu staat een genadeloos leger op het punt de vallei binnen te vallen. De enige hoop op redding voor de overlevenden was Sider Ament, maar hij leeft niet meer. Sider was de drager van de enig overgebleven zwarte staf, een machtige talisman die eeuwenlang door de Ridders van het Woord is doorgegeven en die van cruciaal belang is bij het in evenwicht houden van de magie op de wereld. Om de wereld van de ondergang te redden, moet de magie van de staf behouden blijven. Panterra Qu, een jonge Spoorzoeker aan wie de staf na Siders dood wordt doorgegeven, heeft grote moeite om de macht ervan naar zijn hand te zetten. Alles moet op alles worden gezet, want eenieder zal een hoge tol betalen als de oorlog tussen het Woord en de Leegte naar de duisternis dreigt af te glijden. ',
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/2/2/5/2/9200000002212522.jpg',
+    id: 'idv5DQAAQBAJ',
+    title: 'Klaus Barbie',
+    description:
+      'The true story of one of Hitler’s most feared and brutal killers: his life and crimes, postwar atrocities, and forty-year evasion of justice. During World War II, SS Hauptsturmführer Nikolaus “Klaus” Barbie earned a reputation for sadistic cruelty unmatched by all but a handful of his contemporaries in Adolf Hitler’s Gestapo. In 1942, he was dispatched to Nazi-occupied France after leaving his bloodstained mark on the Netherlands. In Lyons, Barbie was entrusted with “cleansing” the region of Jews, French Resistance fighters, and Communists, an assignment he undertook with unparalleled enthusiasm. Thousands of people died on Barbie’s orders during his time in France—often by his own hand—including forty-four orphaned Jewish children and captured resistance leader Jean Moulin, who was tortured and beaten to death. When the Allies were approaching Lyons in the months following the D-Day invasion, Barbie and his subordinates fled, but not before brutally slaughtering all the prisoners still being held captive. But the war’s conclusion was not the end of the Klaus Barbie nightmare. With the dawning of the Cold War, the “Butcher of Lyons” went on to find a new purpose in South America, just as tensions between the United States and the Soviet Union were escalating. Soon, Barbie had a different employer who valued his wartime experience and expertise as an anti-communist man hunter and murderer: the US intelligence services. In Klaus Barbie, investigative journalist and documentary filmmaker Tom Bower tells the fascinating, startling, and truly disturbing story of a real-life human monster, and draws back the curtain on one of America’s most shocking secrets of the Cold War.',
+    publisher: 'Open Road Media',
+    publishedAt: '2017-03-21',
+    pageCount: 227,
+    cover:
+      'http://books.google.com/books/content?id=idv5DQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+    language: 'en',
+    isbn: ['9781504043250', '1504043251'],
+    authors: [authors[3]],
+    categories: ['Biography & Autobiography'],
+    rating: null,
   },
   {
-    ISBN: 9781841499789,
-    title: 'Bloodfire Quest',
-    author: 'Terry Brooks',
-    summary:
-      'The adventure that started in Wards of Faerie takes a thrilling new turn, in the second novel of New York Times bestselling author Terry Brooks’s brand-new trilogy—The Dark Legacy of Shannara! The quest for the long-lost Elfstones has drawn the leader of the Druid order and her followers into the hellish dimension known as the Forbidding, where the most dangerous creatures banished from the Four Lands are imprisoned. Now the hunt for the powerful talismans that can save their world has become a series of great challenges: a desperate search for kidnapped comrades, a relentless battle against unspeakable predators, and a grim race to escape the Forbidding alive. But though freedom is closer than they know, it may come at a terrifying price. Back in the village of Arborlon, the mystical, sentient tree that maintains the barrier between the Four Lands and the Forbidding is dying. And with each passing day, as the breach between the two worlds grows larger, the threat of the evil eager to spill forth and wreak havoc grows more dire. The only hope lies with a young Druid, faced with a staggering choice: cling to the life she cherishes or combat an army of darkness by making the ultimate sacrifice.',
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/7/0/0/7/9200000009027007.jpg',
+    id: 'whNjDwAAQBAJ',
+    title: 'Best of Barbie',
+    description:
+      "Featuring striking photographs and lively, insightful commentary and histories, The Best of Barbie is a full-color visual feast that novice and experienced collectors alike will treasure. Scattered throughout the book are trivia facts that test the reader's knowledge of America's favorite doll. Plus, accompanying each photo is a handy identification and value info bar - facts readers need at a glance. With complete descriptions, 300 magnificent color photos and more than 1,200 price listings, collectors, appraisers, buyers and fans will have the tools to identify the most influential Barbie Dolls including Barbie #1 Ponytail Style, Bubblecut Barbie, Barbie Fashion Queen, American Girl and many more.",
+    publisher: 'Penguin',
+    publishedAt: '2011-02-28',
+    pageCount: 256,
+    cover:
+      'http://books.google.com/books/content?id=whNjDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+    language: 'en',
+    isbn: ['9781440225147', '1440225141'],
+    authors: [authors[4]],
+    categories: ['Antiques & Collectibles'],
+    rating: null,
   },
   {
-    ISBN: 9781409117933,
-    title: 'A Week in Winter',
-    author: 'Maeve Binchy',
-    summary:
-      "Stoneybridge is full of holiday-makers in summer, its beaches are full of buckets and spades and sandcastles; but in winter it's cold and wild. Few choose to walk along the fine sands, the big round pebbles and the exposed rocky promontories that make up the wind-swept Atlantic coastline. Those who do can't help but see Stone House, the big house on the cliff; once falling into disrepair it is now a beautiful hotel specialising in winter holidays. Its big, warm kitchen, its open log-fires and its elegant bedrooms provide a welcome few can resist, whatever their reasons for coming. Henry and Nicola are burdened with a terrible secret, while cheerful nurse Winnie finds herself on the holiday from hell. John has arrived on an impulse after he missed a flight at Shannon; eccentric Freda claims to be a psychic - and a part-time hairdresser. Then there's Nora, a silent watchful older woman who seems ready to disapprove at any moment.. A Week in Winter is full of Maeve's trademark warmth, humour and characters you want to spend time with.",
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/6/2/8/0/9200000008070826.jpg',
+    id: 'Fn0qEAAAQBAJ',
+    title: 'Athena to Barbie',
+    description:
+      "Athena to Barbie explores the vexed nature of being a woman. It maps the four corners of impossible choice a female faces because of the female body--her body as spiritual space (Mary), as political space (Athena), as erotic space (Venus), and as materialist space (Barbie). The book tracks the difficulty women face in understanding themselves as someone who has, but is not only, a body. The question of identity is particularly fraught and complicated when it comes to women--because the ability to bear children is a double-edged sword. Across time (including right now), having a womb has shaped how women are viewed and treated in negative ways, and women's childbearing abilities have been used to stereotype, oppress, and constrain them. Pregnancy is powerful, but the possibility of pregnancy comes with impossible pressures and choices. This book takes on the task of reconciliation--how women can understand themselves in light of their bodies--through an intense dive into history, art, literature, theology, and, particularly, philosophy.",
+    publisher: 'Fortress Press',
+    publishedAt: '2021-11-02',
+    pageCount: 204,
+    cover:
+      'http://books.google.com/books/content?id=Fn0qEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+    language: 'en',
+    isbn: ['9781506480480', '1506480489'],
+    authors: [authors[3]],
+    categories: ['Social Science'],
+    rating: null,
   },
   {
-    ISBN: 9789460681387,
-    title: 'Blue Curacao',
-    author: 'Linda van Rijn',
-    summary:
-      'Als haar kersverse echtgenoot tijdens de huwelijksreis spoorloos verdwijnt, staat Hannah voor een raadsel. Hoe goed kent ze eigenlijk de mensen die ze altijd... De romantische huwelijksreis van Hannah en Koen naar Curaçao wordt ruw verstoord als Koen tijdens het snorkelen spoorloos verdwijnt. Hannah wordt gek van angst. De plaatselijke politie loopt niet zo hard als Hannah zou willen en ten einde raad gaat ze zelf op onderzoek uit. Die zoektocht brengt onaangename waarheden aan het licht. Als Hannah zelfs voor haar eigen leven moet vrezen, wordt ze geconfronteerd met de vraag of ze Koen wel zo goed kent als ze denkt.',
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/0/9/4/2/9200000010732490.jpg',
+    id: 'c7v2DAAAQBAJ',
+    title: 'A Study Guide for Marge Piercy\'s "Barbie Doll"',
+    description:
+      'A Study Guide for Marge Piercy\'s "Barbie Doll," excerpted from Gale\'s acclaimed Poetry for Students. This concise study guide includes plot summary; character analysis; author biography; study questions; historical context; suggestions for further reading; and much more. For any literature project, trust Poetry for Students for all of your research needs.',
+    publisher: 'Gale, Cengage Learning ',
+    publishedAt: '2016',
+    pageCount: 13,
+    cover:
+      'http://books.google.com/books/content?id=c7v2DAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+    language: 'en',
+    isbn: ['9781410340924', '1410340929'],
+    authors: [authors[1]],
+    categories: ['Literary Criticism'],
+    rating: null,
   },
   {
-    ISBN: 9780751548525,
-    title: 'Safe Haven',
-    author: 'Nicholas Sparks',
-    summary:
-      'Love hurts. There is nothing as painful as heartbreak. But in order to learn to love again you must learn to trust again. When a mysterious young woman named Katie appears in the small town of Southport, her sudden arrival raises questions about her past. Beautiful yet unassuming, Katie is determined to avoid forming personal ties until a series of events draws her into two reluctant relationships. Despite her reservations, Katie slowly begins to let down her guard, putting down roots in the close-knit community. But even as Katie starts to fall in love, she struggles with the dark secret that still haunts her ...',
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/0/5/2/3/9200000010683250.jpg',
+    id: 'klplDwAAQBAJ',
+    title: 'Nazi Gold and Klaus Barbie',
+    description:
+      'Two shocking exposés of Nazi cruelty and international collusion from “one of the finest investigative journalists” (The Washington Times). Nazi Gold: The Full Story of the Fifty-Year Swiss-Nazi Conspiracy to Steal Billions from Europe’s Jews and Holocaust Survivors This riveting exposé reveals the shocking truth about how the Swiss banking industry knowingly collaborated with the Third Reich during the darkest era in modern history. With the knowledge and acquiescence of the Swiss government, hundreds of millions of dollars stolen from Jewish Holocaust victims were systematically hidden away in Swiss bank accounts. For the next half century, Swiss authorities engaged in a covert campaign of lies, subterfuge, and corruption to hide the wealth from its rightful owners—concentration camp survivors and the families of the slain—while freely dispensing the illegally obtained funds to fugitive Nazis. Nazi Gold is an explosive account of state-endorsed crimes and atrocities; of former victims fighting courageously for their due in the face of prejudice, hatred, and indifference; and of the dedicated US Treasury agents who worked tirelessly for decades to right an unconscionable wrong. “Compelling [and] carefully researched.” —The Washington Times Klaus Barbie: The Butcher of Lyons In 1942, SS Gestapo chief Nikolaus “Klaus” Barbie was dispatched to Nazi-occupied France after leaving his bloodstained mark on the Netherlands. In Lyons, Barbie was entrusted with “cleansing” the region of Jews, French Resistance fighters, and Communists, an assignment he undertook with sadistic cruelty. Thousands died on Barbie’s orders. Following the D-Day invasion, Barbie fled, slaughtering all his prisoners. But the war’s conclusion was not the end of the “Butcher of Lyons.” With the dawning of the Cold War, Barbie went on to find a new employer: the US intelligence services. He escaped to South America, where he lived a free man until extradited to France to finally stand trial for war crimes in 1983. “[A] taut, richly backgrounded story.” —Kirkus Reviews',
+    publisher: 'Open Road Media',
+    publishedAt: '2018-07-24',
+    pageCount: 552,
+    cover:
+      'http://books.google.com/books/content?id=klplDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+    language: 'en',
+    isbn: ['9781504054973', '1504054970'],
+    authors: [authors[5]],
+    categories: ['History'],
+    rating: null,
   },
   {
-    ISBN: 9789023429258,
-    title: 'De wereld volgens Garp',
-    author: 'John Irving',
-    summary:
-      'De wereld volgens Garp is een zeldzaam komische, originele maar ook schokkende roman die John Irving in één klap beroemd maakte. Sinds de verschijning in 1978 hebben miljoenen lezers genoten van de excentrieke, non-conformistische Jenny, haar zoon T.S. Garp en de fanatici, onschuldige kinderen, transseksuelen, hoeren, worstelaars en de vele andere figuren die de wereld van Garp bevolken. De wereld volgens Garp is een klassieker, een meesterlijke tragikomedie die een diepe indruk op de lezer zal achterlaten.',
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/6/3/6/7/1001004005997636.jpg',
+    id: 'Ml-9EAAAQBAJ',
+    title: 'Barbie as the Island Princess',
+    description:
+      "Barbie as the Island Princess Summary of this story. In the book Barbie as the Island Princess, a young princess lives on a beautiful island in the middle of the ocean. Everyone on the island loves and respects her, and she spends her days discovering and taking care of the animals who live there. Barbie meets a group of sailors who were once shipwrecked on the island. She welcomes them and helps them find a place to stay and some food. As the days go by, the sailors start to feel better and are grateful for Barbie's kindness and giving. They ask her to sail with them and promise to show her new places and exciting things. Barbie is afraid to leave her island home at first, but she soon learns that there is a huge world out there for her to explore. So, she decides to join the sailors. She packs up her things, says goodbye to her family and friends, and gets on their ship. Barbie goes to beautiful towns and tall buildings, and she meets new people and learns about their cultures. Even with all the new sights and sounds, she never forgets her island home. Along the way, they face rough seas, bad weather, and scary sea creatures, but Barbie is always there to help them with her island knowledge and kindness. One day, they meet a group of pirates who attack their ship. Barbie is scared, but she uses what she knows about islands to make a fake sea monster, which scares the pirates away and saves the sailors.The sailors are amazed by how brave and clever Barbie is. They continue their journey but will never forget the island princess who saved their lives. They face many problems and problems, but Barbie's example gives them the confidence and strength to deal with them. Years go by, and the sailors finally go back home, but they never forget their adventures with Barbie and the lessons they learned from her. One of the sailors writes a best-selling book about their travels, which gives people all over the world hope. People from all over the world go to the island where Barbie lived to learn about its history and culture, as well as about the amazing woman who used to live there. Even though Barbie had been dead for a long time, her memory lived on. People all over the world were moved by her courage and kindness, and her spirit continued to touch the lives of those who heard her story. In the end, Barbie as the Island Princess is a great story for kids about how important it is to have personal ideals, an identity, a community, the ability to bounce back, and the ability to change. It means that even when we face challenges and hurdles, we didn't expect, we can rely on our own skills, knowledge, and strength to get through them, and that by working together and helping each other, we can get through even the hardest situations. The story shows how important personal values and the courage to follow one's own passions and desires are. It also reminds us that even when we face challenges and problems we didn't expect, we can use our own strengths and creativity to find ways to deal with them. How the story started: Once upon a time, there was a beautiful girl named Barbie who was also very kind. The world in which Barbie, the Island Princess, lives is set up in the first line of this children's book. The fact that the island is in the middle of the ocean already makes it seem far away and isolated. It makes it sound like the island is cut off from the rest of the world and surrounded by a lot of water. This fact alone makes me curious about the island and the people who live there. The beautiful green forests that circle the island show the natural beauty of the island. The word \"lush\" means that the woods are full of life and full of plants. This makes me think of a healthy ecosystem filled with lots of plants and animals. It also means that people haven't changed the island much, so the woods have stayed the way they were when they were first made. The beautiful blue waters that circle the island are another important part of the description. The word \"sparkling\" makes you think of clear, clean water that shines in the sun. This adds to the natural beauty of the island and keeps the idea that it is a pure, unspoiled place. The beautiful blue lakes and lush green forests give the impression of a paradise-like setting. The island is shown as a place with beautiful scenery and peace, where people can get in touch with nature. It is a long way from the busy towns that many of us are used to, which adds to the mysterious and interesting feeling of the island. But the fact that the island is in the middle of the ocean makes it a hard place to live. People who live on the island are cut off from the rest of the world, which could make it hard for them to get help or supplies in an emergency. Overall, the first line of the story sets up a world full of natural beauty and peace. It makes you think of a remote place with long stretches of water and natural beauty that hasn't been changed. The island shows a world that is different from the busy, bustling towns that many of us know. This makes the Island Princess' realm even more interesting and fascinating. Everyone on the island loves and respects Barbie, which shows that she is a kind and generous person. It means that the people on the island like and trust her because of how she acts and treats them. Barbie is not just a symbol; she is very close to the people and animals who live on the island. The fact that animals are mentioned is important because it shows that Barbie has a special connection to nature. Not only do the people who live on the island admire her, but so do the animals. This makes it seem like Barbie is a girl who cares about other people and is aware of her surroundings. Barbie is an island princess, which means she must lead and protect the people who live there. She is liked and respected, and she also has a duty to take care of the island and its people. This means Barbie is a strong leader who is willing to put the needs of her people first. Barbie is aware of her environment and has a lot of care for the animals who live there. The fact that Barbie likes to spend her days exploring the island shows that she is brave and curious. She doesn't want to just stay in one place. Instead, she wants to explore the island and find all its secret treasures. This makes the reader feel excited and curious about Barbie because they can imagine all the amazing things she sees and experiences in her everyday life. The fact that Barbie cares about the animals on the island is important because it shows that she has a special bond with nature. She wants to find out about the island for her own good, but she also wants to make sure the animals who live there are safe and protected. This gives people the idea that Barbie is a nice, caring person who cares a lot about the world. Barbie spends her days on the island exploring and taking care of the animals there, which makes it seem like she has a lot of spare time. This means that Barbie doesn't have to do much on the island and that she has a lot of free time. It emphasizes the idea that the island is a paradise where people can live a peaceful, worthwhile life in harmony with nature. She loves singing and dancing very much, and they are very important parts of her life.",
+    publisher: 'AQEEL AHMED',
+    publishedAt: '2023-05-06',
+    pageCount: 29,
+    cover:
+      'http://books.google.com/books/content?id=Ml-9EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+    language: 'en',
+    isbn: ['9781998810307', '1998810305'],
+    authors: [authors[6]],
+    categories: ['Fiction'],
+    rating: null,
   },
   {
-    ISBN: 9789460680854,
-    title: 'Winter Chalet',
-    author: 'Linda van Rijn',
-    summary:
-      "Vier vriendinnen genieten van een skivakantie in Kirchberg. De moord op een van hen stelt iedereen voor een raadsel... Tijdens een gezellige skivakantie in het Oostenrijkse Kirchberg kunnen de vriendinnen Isa, Chantal, Karen en Annemieke eindelijk weer eens tijd met z'n vieren doorbrengen. Karen, Chantal en Isa arriveren op de zaterdag, Annemieke sluit later aan, ze moet nog werken. De vakantie van de drie begint heel genoeglijk. De vriendinnen hebben de kans echt bij te praten, wat er in het drukke dagelijks leven vaak bij in schiet, en het is prachtig weer om te skien, wat ze dan ook met veel plezier doen. Maar de gezellige skivakantie krijgt een noodlottige wending op de dag dat Annemieke arriveert. Bij aankomst treft ze een van haar vriendinnen dood aan. Rechercheur GŸnter Wolfsberg van de politie in Kirchberg start een onderzoek. Hij verhoort alle vriendinnen en hun partners en ontdekt dat onder het oppervlak van gelukkige relaties en intense vriendschap de nodige spanningen schuilgaan. Het heeft er alle schijn van dat sommige mensen wel erg graag de schuld willen afschuiven...",
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/6/6/6/7/9200000002547666.jpg',
+    id: 'diTEEAAAQBAJ',
+    title: 'Barbie in Princess Power',
+    description:
+      "The summary of this story In the exciting story Princess Power, kids and adults alike were drawn in by Barbie's experience as a superhero. Through her travels, she taught important lessons about love, friendship, and the power that everyone has. Barbie's story became a tale that was told from one generation to the next. It inspired kids to want to be heroes, too. She showed that true power comes from believing in yourself and using your special skills to make the world a better place. As Barbie traveled to faraway places to help people in need and spread messages of love and peace, her impact grew far beyond the kingdom of Glamoria. She became a spokesperson for peace and worked with groups that cared about children, education, and protecting the environment. Barbie worked hard to make the world a better place, and people all over the world noticed and admired her for it. She stayed humble and kind, holding on to the values that had helped her through her amazing journey. Barbie's story became a sign of hope, telling everyone that no matter who they are or where they come from, they have the power to bring light to the world's darkest places. With every adventure, Barbie's true self came out, showing kids that they, too, could be the stars of their own stories. Her legacy lives on by encouraging students to believe in themselves, accept differences, and make a positive change in their communities. Barbie's most powerful skill wasn't her ability to change into a superhero. Instead, it was her ability to touch hearts, spark children's imaginations, and inspire them to reach their own goals. As Barbie's story kept drawing people in, it served as a constant reminder that everyone can make a difference and help make the world a better, more caring place. How the story started: Once upon a time, a little girl named Barbie lived in the magical country of Glamoria, which was full of hills and lakes. She had a golden heart and a soul full of love. Barbie, on the other hand, was not like other girls. Only her closest friends knew about a secret power she had. Barbie and her friends laughed, played, and went on trips together all day. Her beautiful smile could brighten even the darkest day, and her blue eyes were full of curiosity and wonder. No one knew that Barbie had a lot of hidden strength that was just waiting to come out. When danger was about to cast a dark shadow over the land of Glamoria, a magic spell changed Barbie. She would become Princess Power, a brave character, when things went wrong. Barbie's long, flowing blonde hair was turned into a bright waterfall of glittering colors that matched her unwavering drive. As Princess Power, Barbie had amazing skills that were far beyond those of normal people. She could fly across the sky, her cape fluttering in the wind and her steps looking like they came from another world. Princess Power's clothes sparkled with a beautiful rainbow of colors that showed how much power and magic she had. The people of Glamoria didn't know Princess Power was there, and they didn't know that their favorite doll, Barbie, was the savior they wanted when things went wrong. Barbie's best friends, on the other hand, knew her real identity. They were a loyal group. Ken was one of them. He was a loyal friend who was always by Barbie's side, cheering her on and giving her support. When there was a threat to the kingdom, Barbie would quietly disappear, so Princess Power could take her place. Glamoria saw how powerful Barbie really was during these times. Princess Power used her superhuman strength and amazing agility to fight any bad thing that tried to hurt her land or its people. When Princess Power came in, there would be a flash of bright light that broke through the darkness and gave people hope and comfort. She would come swooping down from the sky as fast as an arrow, her eyes gleaming with determination and ready to take on any job. Glamorians were always grateful to their unknown hero, but they had no idea that their favorite doll, Barbie, was the one who saved them. The kids in the kingdom would often play and dream about being Princess Power, trying to be as brave and strong as she was. They would put on capes and spin around, imagining that they could fly into the sky, save the innocent, and fight against wrongdoing. Barbie was both a normal girl and Princess Power, but she never wanted to be famous or well-known. Her main goal was to make sure everyone in Glamoria was happy and healthy. She thought that being a hero was more about doing things for other people than about getting praise from other people. So began the story of Barbie, a nice girl with a secret identity, and her other self, Princess Power, in the magical country of Glamoria. They were the best examples of courage, kindness, and the power of friendship that lasts. Children learned from their story that even the weakest people can be very strong when they want to love and protect others. As the sun went down on Glamoria, the people there kept Barbie's story close in their hearts, forever thankful to her for the love and courage she gave them. For it was when they were with a young girl named Barbie that they learned to have hope and believe that a hero would always come to stand up for what is right and protect the innocent, even when things were hard. It was hard for Barbie to be both a normal girl and a warrior at the same time. To keep her responsibilities, bonds, and the weight of the world on her shoulders in check, she had to give her full attention and make sacrifices. Barbie had times when she didn't think she was good enough and felt the pressure of her secret identity. When Barbie was worried, she went to her best friends for help. They showed her how much she had changed their lives and the whole kingdom of Glamoria. They told her that she was picked for a reason and that her kindness and strong will made her the perfect Princess Power. Barbie kept fighting hard against the forces of evil to protect Glamoria. She fought bad sorcerers and cunning thieves, and she used her skills to stop their plans and protect the innocent. Each victory gave the kingdom a new reason to hope and reminded Barbie of why she had the skills she did. But there was more to being Princess Power than fighting bad guys and saving the day. Barbie also used her skills to inspire other people and make the world a better place. She went to school to tell her stories and push kids to believe in themselves and their own power. She showed them that small acts of kindness can have a big effect, even if they aren't very big. Barbie's secret identity, Princess Power, became a sign of strength and power, especially for young girls. She disproved the idea that princesses could only be damsels in trouble by showing that they could also be brave, strong, and do amazing things. Through her actions, she told girls to be proud of who they are and the power they have inside of them. Over time, Barbie's fame as Princess Power spread outside of Glamoria. Her deeds turned into stories, and kids all over the kingdom loved to hear about them. Kids could put themselves in the shoes of their favorite superhero by playing with Princess Power action figures and costumes. This lets them feel what it's like to be a hero. Even though everyone loved and cared about Barbie, she never lost sight of her main goal. She stayed grounded and humble and always wanted to make the world a better place. Barbie understood that her secret identity was more than just a way to hide; it was also a duty to help people in need and spread justice and kindness. So, the story of Barbie in Princess Power has given young people hope and shown them that anyone, no matter where they come from or how they look, can make a difference. Barbie taught them that true power came from within and that the strength to do what was right was deep in their hearts. Barbie and her alter ego, Princess Power, kept an eye on the beautiful country of Glamoria, which thrived under their watchful eyes. The people of Glamoria praised their superhero not just for her amazing abilities, but also for the love and kindness that were part of her character. Even though Barbie's story in Princess Power came to an end, the spirit of bravery and faith in the power of virtue lived on in the minds of everyone who heard it. Barbie's journey as a kind-hearted girl with a secret skill was amazing and left a lasting impression on Glamoria and the rest of the world. Barbie was a shining example of happiness and kindness in the magical country of Glamoria. Her heart was as pure as gold, and her spirit never died. Her outer beauty matched her inner light, which made everyone who saw her fall in love with her. With her long, blonde hair falling like rays of sunshine, she was the picture of beauty and grace. The blue eyes of Barbie sparkled with a mix of wonder, love, and care. They were like windows into her heart, showing how much she cared and felt for other people. When Barbie looked at someone in the eyes, it was as if she could see into their souls and connect with them on a deeper level than words could say. But Barbie's smile made everyone around her fall in love with her. It had the power to make people happy and lift their mood, and it could make even the darkest days brighter. With a simple curve of her lips, Barbie could turn a worry into a smile and sadness into laughter. Her smile was contagious, and everyone she met fell in love with her because of it. Barbie was loved not just for her looks, but also for the love and warmth she gave off. She had an amazing way of making people feel loved and appreciated, and wherever she went, she made people feel like they belonged. Barbie was friendly to everyone because she was genuinely interested in their stories and goals. She was happy about their successes and soothed them when they were going through hard times. Barbie had a beautiful heart that was full of kindness and caring. She was always ready to help people out and give them support and encouragement. Barbie was always kind and helpful, whether she was comforting a friend who had lost a loved one or reaching out to a stranger in the market. Her soul gave off warmth and hope like a light that never goes out. Barbie was sure that good things could happen, and that people could change for the better. She didn't give up when things got hard. She faced problems with courage and strength. Even when things were hard, people were inspired by her determination to keep going. Barbie's bright personality brought light to the darkest parts of Glamoria. Under her gentle rule, the country grew because her kindness and generosity made the people feel like they were all in it together. Her acts of kindness spread through the community and made it a more loved and caring place.",
+    publisher: 'AQEEL AHMED',
+    publishedAt: '2023-06-08',
+    pageCount: 70,
+    cover:
+      'http://books.google.com/books/content?id=diTEEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+    language: 'en',
+    isbn: ['9781998810567', '1998810569'],
+    authors: [authors[7]],
+    categories: ['Art'],
+    rating: null,
   },
   {
-    ISBN: 9789023464044,
-    title: 'De Vliegeraar',
-    author: 'Khaled Hosseini',
-    summary:
-      "Amir en Hassan zijn gevoed door dezelfde min en groeien samen op in de hoofdstad van Afghanistan. Als blijk van hun verbondenheid kerft Amir hun namen in een granaatappelboom: 'Amir en Hassan, de sultans van Kabul'. Maar sultans zijn ze alleen in hun fantasie, want Amir hoort tot de bevoorrechte bevolkingsgroep en Hassan en zijn vader zijn arme Hazaren, in dienst van Amirs vader. Bij de jaarlijkse vliegerwedstrijd in Kabul is Amir de vliegeraar, degene die het touw van de vlieger in handen heeft. Hassan is zijn hulpje, de vliegervanger. 'Voor jou doe ik alles!' roept Hassan hem toe voordat hij wegrent om de vallende vlieger uit de lucht op te vangen. Die grenzeloze loyaliteit is niet wederzijds. Wanneer er iets vreselijks gebeurt met Hassan verraadt hij zijn trouwe metgezel. Na de Russische inval vluchten Amir en zijn vader naar de Verenigde Staten. Amir bouwt er een nieuw bestaan op, maar hij slaagt er niet in Hassan te vergeten. De ontdekking van een schokkend familiegeheim voert hem uiteindelijk terug naar Afghanistan, dat inmiddels door de Taliban is bezet. Daar wordt Amir geconfronteerd met spoken uit zijn verleden. Zijn voornemen om zijn oude schuld jegens Hassan in te lossen sleept hem tegen wil en dank mee in een huiveringwekkend avontuur. De vliegeraar is verfilmd door Marc Foster als The Kite Runner.",
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/6/3/5/1/1001004010981536.jpg',
-  },
-  {
-    ISBN: 9789024529445,
-    title: 'De delta deceptie',
-    author: 'Dan Brown',
-    summary:
-      "Hij is terug... Een wetenschappelijke revolutie, een verbijsterende misleiding, een razendsnelle thriller! Onder het poolijs ligt iets wat de wereld voorgoed kan veranderen... Een NASA-satelliet doet een opzienbarende ontdekking op de Noordpool. Dat is een opsteker voor de ruimtevaartorganisatie, die al tijden onder vuur ligt. Ook voor president Zach Herney betekent de vondst goed nieuws: een tweede termijn in het Witte Huis lijkt in zicht. De president vraagt Rachel Sexton, analiste bij de inlichtingendienst NRO, na te gaan of de vondst authentiek is. In allerijl vertrekt ze naar het noordpoolgebied om het werk van een team wetenschappers, onder wie de charismatische oceanograaf Michael Tolland, te controleren. Maar na Rachels aankomst neemt de zaak een onverwachte wending. Het 'bewijs' lijkt minder rotsvast dan gedacht. Voor de president gewaarschuwd kan worden, begint een nachtmerrie op het poolijs. Een speciale eenheid maakt werk van zijn missie: kost wat kost voorkomen dat de waarheid uitkomt... Na Het Juvenalis dilemma, maar vóór De Da Vinci code, schreef Dan Brown deze 'verfijnde mengeling van actie en intriges' (Publishers Weekly). Opnieuw besteedt hij aandacht aan een schimmige geheime dienst. Deze National Reconnaissance Office is nauw verweven met de beroemde ruimtevaartorganisatie NASA. Dan Brown is dé bestsellerauteur van dit moment. De Da Vinci code stond maandenlang op 1 in de top tienen, en ook Het Bernini mysterie en Het Juvenalis dilemma vonden moeiteloos hun weg naar de consument. Ook dit jaar zal in het teken staan van Dan Brown, omdat in mei The Da Vinci Code, dé grote publieksfilm van 2006, wereldwijd in première gaat.",
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/5/0/5/5/1001004006225505.jpg',
-  },
-  {
-    ISBN: 9789044309904,
-    title: 'Hou je mond!',
-    author: 'Sophie Kinsella',
-    summary:
-      "Emma heeft, zoals alle jonge vrouwen ter wereld, een paar geheimpjes. Voor haar ouders, haar vriend, haar collega's. Zo werd ze ontmaagd in de logeerkamer terwijl haar ouders een film zaten te kijken en ze vindt haar vriend Connor een beetje op Ken lijken. Die van Barbie en Ken. Ze geeft de plant van haar irritante collega sinaasappelsap - bijna dagelijks - en haar string doet pijn. Emma is altijd nerveus als ze moet vliegen. Daarom vertelt ze al haar geheimen zomaar aan een ardige vreemde man die naast haar in het vliegtuig zit. Tenminste, Emma denkt dat het een vreemde is. Want wanneer ze de volgende dag op haar werk komt... Sophie Kinsella is bestsellerschrijfster en journaliste. Ze woont in Londen. Ze heeft weinig grote geheimen, behalve dat ze niet dol is op vliegen.",
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/8/3/1/6/1001004002056138.jpg',
-  },
-  {
-    ISBN: 9789023467786,
-    title: 'In een mens',
-    author: 'John Irving',
-    summary:
-      "In een mens is een meeslepende roman over verlangen, geheimhouding en seksuele identiteit. Een boek over de liefde in al haar verschijningsvormen en een gepassioneerd betoog voor seksuele verscheidenheid. Billy, de biseksuele hoofdpersoon, vertelt het tragikomische verhaal (dat meer dan vijf decennia beslaat) van zijn leven als ‘seksuele verdachte’, een term die John Irving voor het eerst gebruikte in zijn onsterfelijke roman De wereld volgens Garp. Dit is John Irvings meest politieke roman sinds De regels van het ciderhuis en Bidden wij voor Owen Meany en een treffend eerbetoon aan Billy’s vrienden en minnaars – een bonte verzameling personages die de lezer niet licht zal vergeten. Het is een onvergetelijk portret van de eenzame, biseksuele man die zich voorgenomen heeft om 'echt belangrijk' te zijn.",
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/0/7/8/7/9200000000037870.jpg',
-  },
-  {
-    ISBN: 9780751548556,
-    title: 'The lucky one',
-    author: 'Nicholas Sparks',
-    summary:
-      'Do you believe in lucky charms? While in Iraq, U.S. Marine Logan Thibault finds a photo, half-buried in the dirt, of a woman. He carries it in his pocket, and from then on his luck begins to change. Back home, Logan is haunted by thoughts of war. Over time, he becomes convinced that the woman in the photo holds the key to his destiny. So he finds the vulnerable and loving Beth and a passionate romance begins. But Logan battles with the one secret he has kept from Beth: how he found her in the first place. And it is a secret that could utterly destroy everything they love ...',
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/7/0/3/7/1001004011797307.jpg',
-  },
-  {
-    ISBN: 9780751542974,
-    title: 'Best of me',
-    author: 'Nicholas Sparks',
-    summary:
-      'The new epic love story by the bestselling author of The Last Song and The Notebook. They were teenage sweethearts from opposite sides of the tracks - with a passion that would change their lives for ever. But life would force them apart. Years later, the lines they had drawn between past and present are about to slip.. Called back to their hometown for the funeral of the mentor who once gave them shelter when they needed it most, they are faced with each other once again and forced to confront the paths they chose. Can true love ever rewrite the past?',
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/4/6/2/8/9200000001208264.jpg',
-  },
-  {
-    ISBN: 9789000316090,
-    title: 'Hotel aan zee',
-    author: 'Maeve Binchy',
-    summary:
-      'In de zomer is het gezellig druk in het badplaatsje Stoneybridge. Overal slenteren vakantiegangers rond en de stranden zijn bezaaid met emmers, schepjes en zandkastelen. Maar in de winter begeeft bijna niemand zich naar de prachtige stranden en de woeste kliffen die samen de ruige westkust van Ierland vormen. De enkeling die toch naar de kust gaat, kan niet om hotel Stone House heen. Daar kan iedere gast rekenen op een warm welkom van eigenaresse Chicky Starr, ongeacht de reden van zijn komst. Zo dragen Henry en Nicola een afschuwelijk geheim met zich mee, ziet de vrolijke verpleegkundige Winnie haar vakantie in het water vallen en komt John op de bonnefooi aanwaaien nadat hij zijn vlucht heeft gemist. De excentrieke Freda is paragnost - en parttime kapper. En dan is er nog Nora, een zwijgzame oudere dame die overal zo het hare van lijkt te denken. Hotel aan zee is een hartverwarmende roman met alle ingrediënten van een echte Maeve Binchy: warmte, humor en heerlijke personages met wie je graag je tijd doorbrengt!',
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/7/2/1/0/9200000009850127.jpg',
-  },
-  {
-    ISBN: 9789024561858,
-    title: 'Inferno',
-    author: 'Dan Brown',
-    summary:
-      "Inferno, de vierde Robert Langdon-thriller, speelt zich af in Italië. `Hoewel ik al tijdens mijn studie Dantes Inferno heb gelezen, heb ik pas onlangs, toen ik onderzoek deed in Florence, echte waardering gekregen voor de invloed van Dantes werk op de moderne tijd,' verklaart Brown. `Ik verheug me erop in mijn nieuwe boek de lezers mee te nemen op een reis naar deze mysterieuze wereld, een landschap vol codes, symbolen en geheime doorgangen.'",
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/8/9/9/9/9200000010839998.jpg',
-  },
-  {
-    ISBN: 9789046113110,
-    title: 'In het hart',
-    author: 'David Baldacci',
-    summary:
-      "Dit is het aangrijpende verhaal van de twaalfjarige Louisa Mae Cardinal, die in New York woont met haar verlegen broertje Oz. Het is 1940 en ze hebben het niet gemakkelijk, want het inkomen van hun vader, die schrijver is, is niet hoog. Maar dat kan Lou niet zoveel schelen, want ze aanbidt haar vader en is gek op zijn verhalen. Maar dan, in één verschrikkelijk moment, verandert Lou's leven voorgoed. Een auto-ongeluk maakt een einde aan hun vaders leven, waardoor zij en Oz moeten verhuizen naar het verre Virginia. Daar, in het isolement van de desolate bergen, komen ze te wonen bij hun excentrieke overgrootmoeder Louisa, Lou's naamgenote. Geplaatst tegenover nieuwe verantwoordelijkheden ziet Lou zich gedwongen snel volwassen te worden. Daar, op haar overgrootmoeders eenvoudige boerderij, op het land waarvan haar vader zo hield en waarover hij steeds weer schreef, ontdekt zij wie zij werkelijk is en wat zij kan betekenen voor deze wereld. En wanneer een vernietigend noodlot hun nieuwe huis treft kan zij de strijd die volgt het hoofd bieden; een strijd die gaat om recht en overleving en die gestreden wordt in een overvolle rechtszaal in Virginia...",
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/2/6/2/1/1001004005971262.jpg',
-  },
-  {
-    ISBN: 9781447229902,
-    title: 'The Hit',
-    author: 'David Baldacci',
-    summary:
-      'The trap is set. Failure is not an option. When government hit man Will Robie is given his next target he knows he’s about to embark on his toughest mission yet. He is tasked with killing one of their own, following evidence to suggest that fellow assassin Jessica Reel has been turned. She’s leaving a trail of death in her wake including her handler. The trap is set. To send a killer to catch a killer. But what happens when you can’t trust those who have access to the nation’s most secret intelligence?',
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/6/5/2/3/9200000009123256.jpg',
-  },
-  {
-    ISBN: 9789044339482,
-    title: 'De Tennisparty',
-    author: 'Sophie Kinsella',
-    summary:
-      "Het tennisweekend is Patricks idee. Zijn nieuwe landhuis, gekocht met de bonussen van zijn baan als beleggingsadviseur, is de ideale locatie. Patricks vrouw Caroline weet nog niet wat de werkelijke reden voor het feestje is. Zij vindt het leuk om haar oude buren Stephen en Annie weer te zien, maar ze is minder blij met de snoeverige Charles en zijn verwende vrouw Cressida. En het laatste koppel, Don en Valerie, beiden bloedfanatiek, is helemaal onuitstaanbaar. Terwijl de vier stellen zich op het zonnige terras installeren, lijkt al vast te staan wie de winnaars zijn in het leven en wie de verliezers. Maar wanneer de eerste bal over het net wordt geslagen, is dat het begin van twee dagen flirten, driftbuien, knallende ruzies en schokkende onthullingen. Door de komst van een ongenode gast wordt duidelijk dat dit weekend helemaal niets met tennis te maken heeft. Lang voordat ze beroemd werd met haar Shopaholic! serie schreef Sophie Kinsella onder haar eigen naam, Madeleine Wickham, zeven romans. De tennis party, haar allereerste boek, verscheen toen ze pas vierentwintig was en is daarom altijd heel bijzonder voor haar gebleven. Daarna volgden onder andere Het zwemfeestje en De vraagprijs. Haar werk is in meer dan dertig talen verschenen. De auteur woont met haar man en kinderen in Londen. 'Een rake roman met scherpe observaties. Licht maar dodelijk.' Mail on Sunday",
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/3/7/6/4/9200000009984673.jpg',
-  },
-  {
-    ISBN: 9780552778459,
-    title: 'In One Person',
-    author: 'John Irving',
-    summary:
-      "A compelling novel of desire, secrecy, and sexual identity, In One Person is a story of unfulfilled love—tormented, funny, and affecting—and an impassioned embrace of our sexual differences. Billy, the bisexual narrator and main character of In One Person, tells the tragicomic story (lasting more than half a century) of his life as a “sexual suspect,” a phrase first used by John Irving in 1978 in his landmark novel of “terminal cases,” The World According to Garp. His most political novel since The Cider House Rules and A Prayer for Owen Meany, John Irving’s In One Person is a poignant tribute to Billy’s friends and lovers—a theatrical cast of characters who defy category and convention. Not least, In One Person is an intimate and unforgettable portrait of the solitariness of a bisexual man who is dedicated to making himself 'worthwhile.'",
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/3/4/5/9/9200000009409543.jpg',
-  },
-  {
-    ISBN: 9789400501157,
-    title: 'De aanslag',
-    author: 'David Baldacci',
-    summary:
-      'Will Robie is een van de besten in zijn vak, een huurmoordenaar die nooit twijfelt en altijd zijn doelwit uitschakelt. Hij is de man op wie de Amerikaanse overheid een beroep doet als het gaat om het doden van haar grootste vijanden, van de monsters die talloze onschuldige slachtoffers op hun naam hebben staan. En niemand is zo goed als Robie. Niemand, behalve Jessica Reel... Reel is net als Robie zeer ervaren, uiterst professioneel en dodelijk precies. Maar Reel heeft zich tegen haar werkgever gekeerd en het vizier gericht op haar voormalige collega’s binnen hun agentschap. Nu een van hun eigen mensen moet worden afgestopt, doet men opnieuw een beroep op Robie. Zijn opdracht: zorg dat je Reel te pakken krijgt, levend of dood. Maar wanneer Robie de jacht opent op Reel, ontdekt hij al snel dat zij weleens gegronde redenen kan hebben voor haar verraad. De aanslagen op het agentschap houden verband met een veel groter gevaar. Een gevaar dat Washington D.C., de Verenigde Staten en de rest van de wereld op de grondvesten zal doen schudden...',
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/4/8/2/7/9200000010047284.jpg',
-  },
-  {
-    ISBN: 9789044339338,
-    title: 'Mag ik je nummer even?',
-    author: 'Sophie Kinsella',
-    summary:
-      "Poppy Wyatt is haar verlovingsring kwijt! Een antiek geval, al drie generaties in het bezit van de familie van Magnus, haar aanstaande. Over tien dagen is de bruiloft! En terwijl ze buiten met haar vriendinnen staat te bellen, wordt haar mobieltje plotseling uit haar handen gegrist. Ook dat nog! Nu is de crisis compleet. Wat moet ze zonder telefoon beginnen? Helemaal hyper denkt Poppy dat ze aan het hallucineren is geslagen wanneer ze in een afvalbak zomaar een smartphone ziet liggen. Hebbes! Maar het duurt niet lang voor de eigenaar, de botte zakenman Sam Roxton, zich meldt. En Sam is 'not amused' als Poppy ijskoud weigert haar schat aan hem af te staan.",
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/3/0/9/4/9200000009984903.jpg',
-  },
-  {
-    ISBN: 9789022556627,
-    title: 'Jarka Ruus',
-    author: 'Terry Brooks',
-    summary:
-      'Twintig jaar zijn voorbij gegaan sinds Grianne Ohmsford afstand deed van haar leven als de gevreesde Ilse Hek, ze bevrijd werd door de magie van het Zwaard van Shannara en de vernietiging van haar mentor, de Morgawr. Als Grianne plotseling verdwijnt, wordt haar jonge dienaar Tagwen gedwongen de handschoen op te nemen en haar uit de handen van haar vijanden te redden, samen met Griannes jonge neef Pen Ohmsford en de machtige elf Ahren Elessedil.',
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/7/8/9/9/1001004011269987.jpg',
-  },
-  {
-    ISBN: 9789460680755,
-    title: 'Last Minute',
-    author: 'Linda van Rijn',
-    summary:
-      'Op de lastminute-vakantie in Hurghada loopt Susan haar ex-vriend tegen het lijf. Liever had ze hem nooit meer gezien... Vijf jaar zijn Susan Waterberg en haar man Hugo getrouwd en gelukkig in Almere. Die mijlpaal wil Susan niet onopgemerkt voorbij laten gaan. Ze regelt haar schoonouders als oppas voor hun zoontje Stijn van drie en boekt een lastminutevakantie naar Hurghada. Voor Hugo is de trip een grote verrassing, zeker omdat hij zijn PADI (duikbrevet) pas een jaar heeft. Nu kan hij eindelijk echt gaan duiken. Hoewel het afscheid van Stijntje hun beiden zwaar valt, verheugen ze zich op een onbezorgde zonvakantie. Als ze op de duikschool inchecken krijgt Susan de schrik van haar leven. De duikinstructeur is een oude bekende en confronteert haar met een verleden dat ze altijd voor Hugo heeft verzwegen. De zorgeloze strandvakantie die Susan voor ogen had, verandert in een web van leugens en chantage. Om haar gezin te behouden, zal ze definitief moeten afrekenen met haar verleden.',
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/2/5/6/7/1001004011817652.jpg',
-  },
-  {
-    ISBN: 9789023464143,
-    title: 'Duizend schitterende zonnen',
-    author: 'Khaled Hosseini',
-    summary:
-      'De ongeschoolde Mariam is vijftien wanneer ze wordt uitgehuwelijkt aan de dertig jaar oudere schoenverkoper Rasheed in Kabul. Jaren later moet zij de beeldschone en slimme Laila naast zich dulden, die door Rasheed na een raketaanval uit het puin is gered. Rasheed neemt Laila in huis in de hoop dat zij hem de zoon zal schenken die Mariam hem niet kan geven. In eerste instantie overheersen tussen de twee vrouwen gevoelens van achterdocht en jaloezie, maar door de tirannieke houding van Rasheed ontstaat er langzamerhand een innige vriendschap. Samen zetten Mariam en Laila alles op alles om te overleven in de eindeloze oorlog van Afghanistan, die voor hen ook binnenshuis woedt. Na het overweldigende succes van De vliegeraar verrast Khaled Hosseini zijn lezers opnieuw met een verpletterend verhaal',
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/7/3/5/1/1001004010981537.jpg',
-  },
-  {
-    ISBN: 9781408842423,
-    title: 'And the Mountains Echoed',
-    author: 'Khaled Hosseini',
-    summary:
-      "And the Mountains Echoed is a deeply moving story about how we love, how we take care of one another and how the choices we make resonate through generations. With profound wisdom, depth, insight and compassion 'and moving from Kabul, to Paris, to San Francisco, to the Greek island of Tinos' Hosseini writes about the bonds that define us and shape our lives, the ways that we help our loved ones in need and how we are often surprised by the people closest to us. Six years in the writing, Khaled Hosseini says of his new book: 'My earlier novels were, at heart, tales of fatherhood and motherhood. My new novel is a multi-generational family story as well, this time revolving around brothers and sisters, and the ways in which they love, wound, betray, honour and sacrifice for each other.'",
-    image: 'http://s.s-bol.com/imgbase0/imagebase/large/FC/0/6/0/3/9200000010223060.jpg',
+    id: 'aHw8EAAAQBAJ',
+    title: 'Voce pode ser Médica',
+    description:
+      'Barbie que ser médica! Para isso, ela vai embarcar em uma grande aventura para aprender sobre essa linda profissão. Você deseja ser médica também? Então, leia essa história incrível e faça parte do mundo da Barbie, onde você pode ser o que quiser!',
+    publisher: 'Ciranda Cultural',
+    publishedAt: '2021-06-14',
+    pageCount: 102,
+    cover:
+      'http://books.google.com/books/content?id=aHw8EAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
+    language: 'pt-BR',
+    isbn: ['PKEY:Barbie_Voce_pode_ser_medica'],
+    authors: [authors[8]],
+    categories: ['Juvenile Fiction'],
+    rating: null,
   },
 ]

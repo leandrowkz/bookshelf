@@ -18,13 +18,18 @@ export function useVolumeTransformer(input: Volume): Book {
   )
 
   const cover =
-    volumeInfo.imageLinks?.thumbnail ||
+    volumeInfo.imageLinks?.small ||
     volumeInfo.imageLinks?.medium ||
+    volumeInfo.imageLinks?.thumbnail ||
     volumeInfo.imageLinks?.large ||
     volumeInfo.imageLinks?.extraLarge ||
     volumeInfo.imageLinks?.smallThumbnail ||
     volumeInfo.imageLinks?.extraLarge ||
     null
+
+  const categories = Array.from(
+    new Set((volumeInfo.categories || []).map((cat) => cat.split(' / ')).flat())
+  )
 
   const book: Book = {
     id: input.id,
@@ -37,7 +42,7 @@ export function useVolumeTransformer(input: Volume): Book {
     language: volumeInfo.language,
     isbn: volumeInfo.industryIdentifiers.map((item) => item.identifier),
     authors,
-    categories: volumeInfo.categories,
+    categories,
     rating: null,
   }
 

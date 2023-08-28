@@ -1,4 +1,5 @@
 import { apiSlice } from '@/store/api'
+import type { Book } from '@/types/Book'
 import type { BookSearchPayload } from '@/types/BookSearchPayload'
 
 export const booksApiSlice = apiSlice.injectEndpoints({
@@ -11,7 +12,7 @@ export const booksApiSlice = apiSlice.injectEndpoints({
       }),
       providesTags: ['SearchBooks'],
     }),
-    getBookDetails: builder.query({
+    getBookDetails: builder.query<Book, string>({
       query: (bookId: string) => `/books/${bookId}`,
       providesTags: ['BookDetails'],
     }),

@@ -3,7 +3,7 @@ import { createStyles, rem } from '@mantine/core'
 export const useStyles = createStyles((theme) => ({
   footer: {
     marginTop: rem(120),
-    paddingInline: theme.spacing.xl,
+    paddingInline: theme.other.spacing.container,
     paddingTop: `calc(${theme.spacing.lg} * 2)`,
     paddingBottom: theme.spacing.lg,
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],

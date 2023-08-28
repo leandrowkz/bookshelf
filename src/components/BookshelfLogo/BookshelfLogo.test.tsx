@@ -1,5 +1,7 @@
-import { render, screen } from '@/test-utils/render'
+import { useRender } from '@/test-utils'
 import { BookshelfLogo } from './BookshelfLogo'
+
+const { render, screen } = useRender()
 
 test('should render logo correctly', () => {
   render(<BookshelfLogo />)

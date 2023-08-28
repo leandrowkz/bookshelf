@@ -1,14 +1,17 @@
-import { useState, type ReactNode } from 'react'
+import { type ReactNode } from 'react'
 import { Layout } from '@/components'
 import { useSearchBooksQuery } from '@/store/books'
-import { TextInput } from '@mantine/core'
-import { IconSearch } from '@tabler/icons-react'
 import { BookList } from '@/components/BookList/BookList'
+import { HomeHero } from '@/components/HomeHero/HomeHero'
 
 export default function Page() {
-  const [search, setSearch] = useState('barbie')
   let content: ReactNode
-  const { data: books, isLoading, isError, isSuccess } = useSearchBooksQuery({ search })
+  const {
+    data: books,
+    isLoading,
+    isError,
+    isSuccess,
+  } = useSearchBooksQuery({ search: 'torto arado' })
 
   if (isLoading) {
     content = 'Loading books...'
@@ -20,14 +23,7 @@ export default function Page() {
 
   return (
     <Layout>
-      <TextInput
-        icon={<IconSearch />}
-        value={search}
-        size="xl"
-        placeholder="Search for through millions of books"
-        mb="lg"
-        onChange={(e) => setSearch(e.target.value)}
-      />
+      <HomeHero />
       {content}
     </Layout>
   )

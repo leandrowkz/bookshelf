@@ -1,19 +1,19 @@
 import { createStyles } from '@mantine/core'
 
-export const useStyles = createStyles((theme) => ({
+export const useStyles = createStyles(({ other, spacing }) => ({
   carousel: {
     '& .mantine-Carousel-viewport': {
-      paddingLeft: theme.spacing.xl,
+      paddingLeft: other.spacing.container,
     },
     '& .mantine-Carousel-controls': {
-      paddingLeft: `calc(${theme.spacing.lg} * 1.8)`,
+      paddingLeft: `calc(${spacing.lg} * 1.8)`,
     },
   },
   cover: {
     aspectRatio: '1.5/1',
   },
   wrapper: {
-    marginLeft: `calc(${theme.spacing.xl} * -1)`,
-    width: `calc(100% + calc(${theme.spacing.xl} * 2))`,
+    marginLeft: `calc(${other.spacing.container} * -1)`,
+    width: `calc(100% + calc(${other.spacing.container} * 2))`,
   },
 }))
