@@ -1,8 +1,6 @@
-import { useState, type ReactNode } from 'react'
+import { type ReactNode } from 'react'
 import { Layout } from '@/components'
 import { useSearchBooksQuery } from '@/store/books'
-import { TextInput } from '@mantine/core'
-import { IconSearch } from '@tabler/icons-react'
 import { BookList } from '@/components/BookList/BookList'
 import { HomeHero } from '@/components/HomeHero/HomeHero'
 
