@@ -12,7 +12,8 @@
     "prepare": "husky install",
     "start:dev": "next dev",
     "start:production": "next start",
-    "test": "jest --watchAll"
+    "test": "jest",
+    "test:watch": "jest --watchAll"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
