@@ -13,9 +13,6 @@ export const useStyles = createStyles((theme) => ({
     flexDirection: 'column',
     gap: theme.spacing.md,
   },
-  actionButton: {
-    // border: `1px solid ${theme.primaryColor}`,
-  },
   bookInfoSection: {
     flex: '1',
     flexDirection: 'column',
@@ -37,3 +34,5 @@ export const useStyles = createStyles((theme) => ({
     marginTop: theme.spacing.lg,
   },
 }))
+
+export default {}

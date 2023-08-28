@@ -96,7 +96,6 @@ export default function Page() {
                   h={70}
                   size="lg"
                   variant="default"
-                  className={classes.actionButton}
                   leftIcon={
                     <Avatar color="violet">
                       <IconPlus />
