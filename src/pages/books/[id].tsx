@@ -16,7 +16,7 @@ import {
 } from '@mantine/core'
 import { useRouter } from 'next/router'
 import { BookCover } from '@/components/BookCover/BookCover'
-import { useStyles } from './[id].styles'
+import { useStyles } from './styles'
 import { useHelpers } from '@/hooks/useHelpers'
 import {
   IconBookOff,
