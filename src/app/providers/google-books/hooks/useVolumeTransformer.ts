@@ -46,7 +46,5 @@ export function useVolumeTransformer(input: Volume): Book {
     rating: null,
   }
 
-  console.log(book)
-
   return book
 }
