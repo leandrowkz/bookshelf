@@ -8,7 +8,7 @@ export function BookshelfLogo() {
   return (
     <Anchor href="/" className={classes.link} data-testid="logo">
       <Text weight={700} size="xl">
-        <Flex align="center" gap="sm">
+        <Flex align="center" gap="xs">
           <IconBooks color={theme.colors.violet[8]} />
           Bookshelf
         </Flex>

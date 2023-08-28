@@ -11,7 +11,7 @@ export const useStyles = createStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     height: theme.other.headerHeight,
-    paddingInline: theme.spacing.xl,
+    paddingInline: theme.other.spacing.container,
 
     [theme.fn.smallerThan('sm')]: {
       justifyContent: 'flex-start',

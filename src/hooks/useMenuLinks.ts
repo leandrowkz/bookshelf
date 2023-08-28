@@ -8,8 +8,8 @@ const headerLinks = [
     label: 'Favorites',
   },
   {
-    link: '/booklist',
-    label: 'My list',
+    link: '/collection',
+    label: 'My collection',
   },
 ]
 

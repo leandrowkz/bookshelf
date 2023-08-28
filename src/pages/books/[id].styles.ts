@@ -13,19 +13,22 @@ export const useStyles = createStyles((theme) => ({
     flexDirection: 'column',
     gap: theme.spacing.md,
   },
+  actionButton: {
+    // border: `1px solid ${theme.primaryColor}`,
+  },
   bookInfoSection: {
     flex: '1',
     flexDirection: 'column',
   },
   authors: {
-    marginTop: theme.spacing.sm,
+    marginTop: theme.spacing.xs,
   },
   metadata: {
     marginTop: theme.spacing.lg,
     display: 'flex',
     alignItems: 'center',
     flexWrap: 'wrap',
-    gap: theme.spacing.sm,
+    columnGap: theme.spacing.sm,
   },
   description: {
     marginTop: theme.spacing.lg,

@@ -16,14 +16,14 @@ export const useStyles = createStyles((theme) => {
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundImage: `linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(${bgBookshelf})`,
-      paddingTop: theme.spacing.xl,
-      paddingBottom: theme.spacing.xl,
-      paddingLeft: theme.spacing.xl,
-      paddingRight: theme.spacing.xl,
-      marginLeft: `calc(${theme.spacing.xl} * -1)`,
-      marginTop: `calc(${theme.spacing.xl} * -1)`,
-      marginBottom: theme.spacing.xl,
-      width: `calc(100% + calc(${theme.spacing.xl} * 2))`,
+      paddingTop: theme.other.spacing.container,
+      paddingBottom: theme.other.spacing.container,
+      paddingLeft: theme.other.spacing.container,
+      paddingRight: theme.other.spacing.container,
+      marginLeft: `calc(${theme.other.spacing.container} * -1)`,
+      marginTop: `calc(${theme.other.spacing.container} * -1)`,
+      marginBottom: theme.other.spacing.container,
+      width: `calc(100% + calc(${theme.other.spacing.container} * 2))`,
     },
 
     inner: {
@@ -42,8 +42,8 @@ export const useStyles = createStyles((theme) => {
     },
 
     content: {
-      paddingTop: theme.spacing.xl,
-      paddingBottom: theme.spacing.xl,
+      paddingTop: theme.other.spacing.container,
+      paddingBottom: theme.other.spacing.container,
 
       [theme.fn.smallerThan('md')]: {
         marginRight: 0,
