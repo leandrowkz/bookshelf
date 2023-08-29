@@ -5,6 +5,8 @@ declare global {
 
   type Falsable<T> = T | false
 
+  type Async<T> = Promise<T> | T
+
   type BooksProvider = 'google-books' | 'open-library'
 
   type RequestPayload = {
@@ -14,7 +16,7 @@ declare global {
     params?: RequestQuery
   }
 
-  type RequestQuery = Record<string, string | boolean | number | null>
+  type RequestQuery = Record<string, string | string[] | boolean | number | number[] | null>
 
   type RequestHeaders = Record<string, string | boolean | number>
 

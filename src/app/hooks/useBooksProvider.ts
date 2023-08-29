@@ -1,5 +1,6 @@
-import { useGoogleBooksProvider } from '@/app/providers/google-books'
 import type { BookProvider } from '@/types/BookProvider'
+import { useGoogleBooksProvider } from '@/app/providers/google-books'
+import { useOpenLibraryProvider } from '@/app/providers/open-library'
 
 export function useBooksProvider(provider: BooksProvider): BookProvider {
   switch (provider) {
@@ -7,9 +8,11 @@ export function useBooksProvider(provider: BooksProvider): BookProvider {
       return useGoogleBooksProvider()
 
     case 'open-library':
-      throw Error('Not implemented yet')
+      return useOpenLibraryProvider()
 
     default:
       throw Error('Provider not found')
   }
 }
+
+export const provider = useBooksProvider('google-books')

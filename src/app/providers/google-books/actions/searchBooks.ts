@@ -8,7 +8,7 @@ export async function searchBooks(payload: BookSearchPayload): Promise<Book[]> {
   const api = useGoogleBooksAPI()
 
   const searchPayload: GoogleBooksSearchPayload = {
-    q: payload.search,
+    q: String(payload.title),
   }
 
   const { items }: VolumesResponse = await api.GET('/volumes', searchPayload)

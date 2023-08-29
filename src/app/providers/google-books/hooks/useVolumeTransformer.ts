@@ -5,7 +5,7 @@ import type { Volume } from '../types'
 export function useVolumeTransformer(input: Volume): Book {
   const { volumeInfo } = input
 
-  const authors = volumeInfo.authors.map(
+  const authors = (volumeInfo.authors || []).map(
     (author) =>
       ({
         id: author,
@@ -17,14 +17,19 @@ export function useVolumeTransformer(input: Volume): Book {
       } as Author)
   )
 
+  const isbnForCover = volumeInfo.industryIdentifiers.find((item) => item.type === 'ISBN_13')
+
   const cover =
-    volumeInfo.imageLinks?.small ||
     volumeInfo.imageLinks?.medium ||
+    volumeInfo.imageLinks?.small ||
     volumeInfo.imageLinks?.thumbnail ||
     volumeInfo.imageLinks?.large ||
     volumeInfo.imageLinks?.extraLarge ||
     volumeInfo.imageLinks?.smallThumbnail ||
     volumeInfo.imageLinks?.extraLarge ||
+    (isbnForCover
+      ? `https://covers.openlibrary.org/b/isbn/${isbnForCover.identifier}-M.jpg`
+      : null) ||
     null
 
   const categories = Array.from(
@@ -43,7 +48,10 @@ export function useVolumeTransformer(input: Volume): Book {
     isbn: volumeInfo.industryIdentifiers.map((item) => item.identifier),
     authors,
     categories,
-    rating: null,
+    rating: volumeInfo.averageRating || null,
+    type: ['physical'],
+    preview: null,
+    purchaseInfo: [],
   }
 
   return book
