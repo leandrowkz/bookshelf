@@ -196,7 +196,23 @@ export default function Page() {
         </Flex>
         <Flex className={classes.bookInfoSection}>
           <Flex gap="md" w="100%" justify="space-between">
-            <Title order={1}>{book.title}</Title>
+            <Title order={1}>
+              <Flex align="center" justify="start" columnGap="sm" wrap="wrap">
+                <Box>{book.title}</Box>
+                {book.type === 'ebook' && (
+                  <Badge
+                    color="teal"
+                    size="lg"
+                    mt="4px"
+                    px="md"
+                    variant="gradient"
+                    gradient={{ from: 'orange', to: 'red' }}
+                  >
+                    Ebook
+                  </Badge>
+                )}
+              </Flex>
+            </Title>
             <ActionIcon variant="default" size="xl" mt="2px">
               <IconHeart />
             </ActionIcon>

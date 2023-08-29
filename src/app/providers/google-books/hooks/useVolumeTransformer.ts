@@ -3,7 +3,7 @@ import type { Author } from '@/types/Author'
 import type { Volume } from '../types'
 
 export function useVolumeTransformer(input: Volume): Book {
-  const { volumeInfo } = input
+  const { volumeInfo, saleInfo } = input
 
   const authors = (volumeInfo.authors || []).map(
     (author) =>
@@ -49,7 +49,7 @@ export function useVolumeTransformer(input: Volume): Book {
     authors,
     categories,
     rating: volumeInfo.averageRating || null,
-    type: ['physical'],
+    type: saleInfo.isEbook ? 'ebook' : 'physical',
     preview: null,
     purchaseInfo: [],
   }

@@ -5,7 +5,7 @@ import type { BookUserInfo } from './BookUserInfo'
 
 export type Book = {
   id: string
-  type: BookType[]
+  type: BookType
   isbn: string[]
   title: string
   description: Nullable<string>
