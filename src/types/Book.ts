@@ -8,7 +8,7 @@ export type Book = {
   type: BookType
   isbn: string[]
   title: string
-  description: Nullable<string>
+  description?: Nullable<string>
   authors: Author[]
   categories: string[]
   cover: Nullable<string>
@@ -18,6 +18,6 @@ export type Book = {
   language: LanguageCode
   rating: Nullable<number>
   preview: Nullable<string>
-  purchaseInfo: BookPurchaseInfo[]
+  purchaseInfo?: BookPurchaseInfo[]
   userInfo?: BookUserInfo
 }

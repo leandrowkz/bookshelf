@@ -17,7 +17,7 @@ export function useVolumeTransformer(input: Volume): Book {
       } as Author)
   )
 
-  const isbnForCover = volumeInfo.industryIdentifiers.find((item) => item.type === 'ISBN_13')
+  const isbnForCover = volumeInfo.industryIdentifiers?.find((item) => item.type === 'ISBN_13')
 
   const cover =
     volumeInfo.imageLinks?.medium ||
@@ -26,7 +26,6 @@ export function useVolumeTransformer(input: Volume): Book {
     volumeInfo.imageLinks?.large ||
     volumeInfo.imageLinks?.extraLarge ||
     volumeInfo.imageLinks?.smallThumbnail ||
-    volumeInfo.imageLinks?.extraLarge ||
     (isbnForCover
       ? `https://covers.openlibrary.org/b/isbn/${isbnForCover.identifier}-M.jpg`
       : null) ||
@@ -45,7 +44,7 @@ export function useVolumeTransformer(input: Volume): Book {
     pageCount: volumeInfo.pageCount,
     cover,
     language: volumeInfo.language,
-    isbn: volumeInfo.industryIdentifiers.map((item) => item.identifier),
+    isbn: (volumeInfo.industryIdentifiers || []).map((item) => item.identifier),
     authors,
     categories,
     rating: volumeInfo.averageRating || null,

@@ -12,6 +12,7 @@ export type GoogleBooksSearchPayload = {
   showPreorders?: boolean
   orderBy?: 'newest' | 'relevance'
   startIndex?: number
+  projection?: 'full' | 'lite'
 }
 
 /**
@@ -40,7 +41,7 @@ type VolumeInfo = {
   publisher: string
   publishedDate: string
   description: string
-  industryIdentifiers: { type: string; identifier: string }[]
+  industryIdentifiers?: { type: string; identifier: string }[]
   pageCount: number
   dimensions: {
     height: string
