@@ -39,7 +39,7 @@ export function Header() {
         </Group>
 
         <Group className={classes.social} position="right" noWrap>
-          <Button onClick={() => router.push('/sign-in')} variant="subtle">
+          <Button onClick={() => router.push('/sign-in')} variant="default">
             Sign in
           </Button>
           <Button onClick={() => router.push('/sign-up')}>Sign up</Button>
