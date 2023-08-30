@@ -1,7 +1,7 @@
 import type { CollectionType } from './CollectionType'
 import type { Review } from './Review'
 
-export type BookUserInfo = {
+export type UserBookInfo = {
   collection: Nullable<CollectionType>
   startedReadingAt: Nullable<string>
   droppedReadingAt: Nullable<string>

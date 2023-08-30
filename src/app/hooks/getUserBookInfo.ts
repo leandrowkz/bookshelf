@@ -1,9 +1,9 @@
 import { useSupabase } from './useSupabase'
 import { google } from './useBooksProvider'
-import type { BookUserInfo } from '@/types/BookUserInfo'
+import type { UserBookInfo } from '@/types/UserBookInfo'
 import { useDBUserBookInfoTransformer } from './useDBUserBookInfoTransformer'
 
-export async function getUserBookInfo(userId: string, bookId: string): Promise<BookUserInfo> {
+export async function getUserBookInfo(userId: string, bookId: string): Promise<UserBookInfo> {
   const supabase = useSupabase()
   const book = await google.getBookDetails(bookId)
 

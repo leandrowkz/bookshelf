@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { type BookUserInfo } from '@/types/BookUserInfo'
+import { type UserBookInfo } from '@/types/UserBookInfo'
 
-export function useDBUserBookInfoTransformer(row: any): BookUserInfo {
-  const bookInfo: BookUserInfo = {
+export function useDBUserBookInfoTransformer(row: any): UserBookInfo {
+  const bookInfo: UserBookInfo = {
     collection: row.collection_key,
     startedReadingAt: row.started_reading_at,
     droppedReadingAt: row.dropped_reading_at,

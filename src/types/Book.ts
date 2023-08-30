@@ -1,7 +1,7 @@
 import type { Author } from './Author'
 import type { BookPurchaseInfo } from './BookPurchaseInfo'
 import type { BookType } from './BookType'
-import type { BookUserInfo } from './BookUserInfo'
+import type { UserBookInfo } from './UserBookInfo'
 
 export type Book = {
   id: string
@@ -19,5 +19,5 @@ export type Book = {
   rating: Nullable<number>
   preview: Nullable<string>
   purchaseInfo?: BookPurchaseInfo[]
-  userInfo?: BookUserInfo
+  userInfo?: UserBookInfo
 }
