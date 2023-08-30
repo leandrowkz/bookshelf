@@ -9,7 +9,7 @@ declare global {
 
   type Async<T> = Promise<T> | T
 
-  type BookProviderType = 'google-books' | 'open-library' | 'local'
+  type BookProviderType = 'google-books' | 'open-library'
 
   type RequestPayload = {
     path: string
