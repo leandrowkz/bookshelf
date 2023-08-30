@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server'
-import { google } from '@/app/hooks/useBooksProvider'
+import { local } from '@/app/hooks/useBooksProvider'
 
 export async function GET(request: Request, { params }: RequestParamsWithId) {
-  const books = await google.getBooksSimilar(params.bookId)
+  const userId = '1'
+  const books = await local.getCollectionBooks(params.collectionId, userId)
 
   return NextResponse.json(books)
 }

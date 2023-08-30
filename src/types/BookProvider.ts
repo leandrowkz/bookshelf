@@ -13,5 +13,5 @@ export type BookProvider = {
   getBooksSimilar: (bookId: string) => Async<Book[]>
   getBookCovers: (bookId: string) => Async<string[]>
   getCollections: () => Async<Collection[]>
-  getCollectionBooks: (collectionId: CollectionType) => Async<Book[]>
+  getCollectionBooks: (collectionId: CollectionType, userId: string) => Async<Book[]>
 }

@@ -1,3 +1,5 @@
+import type { CollectionType } from './CollectionType'
+
 declare global {
   type Nullable<T> = T | null
 
@@ -7,7 +9,7 @@ declare global {
 
   type Async<T> = Promise<T> | T
 
-  type BooksProvider = 'google-books' | 'open-library'
+  type BookProviderType = 'google-books' | 'open-library' | 'local'
 
   type RequestPayload = {
     path: string
@@ -27,6 +29,7 @@ declare global {
       bookId: string
       authorId: string
       categoryId: string
+      collectionId: CollectionType
     }
   }
 
