@@ -5,8 +5,6 @@ import { getBookCovers } from '@/app/providers/google-books/actions/getBookCover
 import { getBookDetails } from '@/app/providers/google-books/actions/getBookDetails'
 import { getBooksSimilar } from '@/app/providers/google-books/actions/getBooksSimilar'
 import { getCategoryBooks } from '@/app/providers/google-books/actions/getCategoryBooks'
-import { getCollectionBooks } from '@/app/providers/google-books/actions/getCollectionBooks'
-import { getCollections } from '@/app/providers/google-books/actions/getCollections'
 import type { BookProvider } from '@/types/BookProvider'
 
 export function useGoogleBooksProvider(): BookProvider {
@@ -18,7 +16,5 @@ export function useGoogleBooksProvider(): BookProvider {
     getBookDetails,
     getBooksSimilar,
     getCategoryBooks,
-    getCollectionBooks,
-    getCollections,
   }
 }
