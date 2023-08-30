@@ -36,6 +36,7 @@ export function Header() {
         </Group>
 
         <Group className={classes.social} position="right" noWrap>
+          <Button variant="subtle">Sign in</Button>
           <Button>Sign up</Button>
           <ColorSchemeToggle size="xl" />
         </Group>

@@ -6,6 +6,7 @@ module.exports = withBundleAnalyzer({
   reactStrictMode: false,
   experimental: {
     appDir: true,
+    serverActions: true,
   },
   eslint: {
     ignoreDuringBuilds: true,

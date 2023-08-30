@@ -35,6 +35,16 @@ export function useVolumeTransformer(input: Volume): Book {
     new Set((volumeInfo.categories || []).map((cat) => cat.split(' / ')).flat())
   )
 
+  let isbn10 = ''
+  let isbn13 = ''
+  volumeInfo.industryIdentifiers?.forEach((item) => {
+    if (item.type === 'ISBN_10') {
+      isbn10 = item.identifier
+    } else if (item.type === 'ISBN_13') {
+      isbn13 = item.identifier
+    }
+  })
+
   const book: Book = {
     id: input.id,
     title: volumeInfo.title,
@@ -44,7 +54,7 @@ export function useVolumeTransformer(input: Volume): Book {
     pageCount: volumeInfo.pageCount,
     cover,
     language: volumeInfo.language,
-    isbn: (volumeInfo.industryIdentifiers || []).map((item) => item.identifier),
+    isbn: isbn13 || isbn10 || input.id,
     authors,
     categories,
     rating: volumeInfo.averageRating || null,

@@ -33,6 +33,15 @@ const theme: MantineThemeOverride = {
     ActionIcon: {
       defaultProps: { size: 'md' },
     },
+    Input: {
+      defaultProps: { size: 'md' },
+    },
+    TextInput: {
+      defaultProps: { size: 'md' },
+    },
+    PasswordInput: {
+      defaultProps: { size: 'md' },
+    },
     Title: {
       styles: {
         root: {
