@@ -16,7 +16,6 @@ import {
 } from '@mantine/core'
 import { useRouter } from 'next/router'
 import { BookCover } from '@/components/BookCover/BookCover'
-import { useStyles } from './styles'
 import { useHelpers } from '@/hooks/useHelpers'
 import {
   IconBookOff,
@@ -32,7 +31,6 @@ import { useMockData } from '../../../test-utils/hooks/useMockData'
 
 export default function Page() {
   const router = useRouter()
-  const { classes } = useStyles()
   const { getInlineAuthors, getYearFromDateString } = useHelpers()
   const { books } = useMockData()
 
@@ -77,21 +75,12 @@ export default function Page() {
 
   return (
     <Layout>
-      <Flex className={classes.wrapper}>
-        <Flex className={classes.coverSection}>
+      <Flex gap="xl">
+        <Flex direction="column" gap="theme.spacing.lg">
           <BookCover book={book} radius="lg" />
-          <Flex className={classes.actions}>
+          <Flex direction="column" gap="md">
             <Menu shadow="md" width="target">
               <Menu.Target>
-                {/* <Group>
-                  <Avatar size={40} color="blue">
-                    BH
-                  </Avatar>
-                  <div>
-                    <Text>Bob Handsome</Text>
-                    <Text size="xs" color="dimmed">bob@handsome.inc</Text>
-                  </div>
-                </Group> */}
                 <Button
                   h={70}
                   size="lg"
@@ -194,7 +183,7 @@ export default function Page() {
             </Button>
           </Box>
         </Flex>
-        <Flex className={classes.bookInfoSection}>
+        <Flex w="100%" direction="column">
           <Flex gap="md" w="100%" justify="space-between">
             <Title order={1}>
               <Flex align="center" justify="start" columnGap="sm" wrap="wrap">
@@ -217,10 +206,10 @@ export default function Page() {
               <IconHeart />
             </ActionIcon>
           </Flex>
-          <Title c="dimmed" order={3} className={classes.authors}>
+          <Title c="dimmed" order={3} mt="xs">
             {getInlineAuthors(book.authors)}
           </Title>
-          <Box className={classes.metadata}>
+          <Flex mt="lg" align="center" wrap="wrap" columnGap="sm">
             {book.categories.length && (
               <>
                 <Text c="dimmed">{book.categories.join(', ')}</Text>
@@ -234,16 +223,11 @@ export default function Page() {
               •
             </Text>
             <Text c="dimmed">{getYearFromDateString(book.publishedAt || '')}</Text>
-          </Box>
-          <Spoiler
-            maxHeight={275}
-            showLabel="Show more"
-            hideLabel="Hide"
-            className={classes.description}
-          >
+          </Flex>
+          <Spoiler mt="lg" maxHeight={275} showLabel="Show more" hideLabel="Hide">
             <Text dangerouslySetInnerHTML={{ __html: book.description || '' }} size="lg" />
           </Spoiler>
-          <DataList list={list} mt="lg" className={classes.listInfo} />
+          <DataList list={list} mt="lg" />
         </Flex>
       </Flex>
       {book.authors.map((author, i) => (

@@ -1,11 +1,11 @@
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
-import { useRouter } from 'next/navigation'
+// import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 export default function Page() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const router = useRouter()
+  // const router = useRouter()
   const supabase = createClientComponentClient()
 
   const handleSignUp = async () => {
