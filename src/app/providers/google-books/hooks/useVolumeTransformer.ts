@@ -3,9 +3,9 @@ import type { Author } from '@/types/Author'
 import type { Volume } from '../types'
 
 export function useVolumeTransformer(input: Volume): Book {
-  const { volumeInfo } = input
+  const { volumeInfo, saleInfo } = input
 
-  const authors = volumeInfo.authors.map(
+  const authors = (volumeInfo.authors || []).map(
     (author) =>
       ({
         id: author,
@@ -17,19 +17,33 @@ export function useVolumeTransformer(input: Volume): Book {
       } as Author)
   )
 
+  const isbnForCover = volumeInfo.industryIdentifiers?.find((item) => item.type === 'ISBN_13')
+
   const cover =
-    volumeInfo.imageLinks?.small ||
     volumeInfo.imageLinks?.medium ||
+    volumeInfo.imageLinks?.small ||
     volumeInfo.imageLinks?.thumbnail ||
     volumeInfo.imageLinks?.large ||
     volumeInfo.imageLinks?.extraLarge ||
     volumeInfo.imageLinks?.smallThumbnail ||
-    volumeInfo.imageLinks?.extraLarge ||
+    (isbnForCover
+      ? `https://covers.openlibrary.org/b/isbn/${isbnForCover.identifier}-M.jpg`
+      : null) ||
     null
 
   const categories = Array.from(
     new Set((volumeInfo.categories || []).map((cat) => cat.split(' / ')).flat())
   )
+
+  let isbn10 = ''
+  let isbn13 = ''
+  volumeInfo.industryIdentifiers?.forEach((item) => {
+    if (item.type === 'ISBN_10') {
+      isbn10 = item.identifier
+    } else if (item.type === 'ISBN_13') {
+      isbn13 = item.identifier
+    }
+  })
 
   const book: Book = {
     id: input.id,
@@ -40,10 +54,13 @@ export function useVolumeTransformer(input: Volume): Book {
     pageCount: volumeInfo.pageCount,
     cover,
     language: volumeInfo.language,
-    isbn: volumeInfo.industryIdentifiers.map((item) => item.identifier),
+    isbn: isbn13 || isbn10 || input.id,
     authors,
     categories,
-    rating: null,
+    rating: volumeInfo.averageRating || null,
+    type: saleInfo.isEbook ? 'ebook' : 'physical',
+    preview: null,
+    purchaseInfo: [],
   }
 
   return book

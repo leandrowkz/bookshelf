@@ -1,8 +1,5 @@
-import type { OpenLibraryProvider } from '../types'
-import { getBookDetails } from '../actions/getBookDetails'
+import type { BookProvider } from '@/types/BookProvider'
 
-export function useOpenLibraryProvider(): OpenLibraryProvider {
-  return {
-    getBookDetails,
-  }
+export function useOpenLibraryProvider(): BookProvider {
+  throw Error('NOT IMPLEMENTED')
 }

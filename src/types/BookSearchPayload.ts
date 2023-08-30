@@ -1,3 +1,10 @@
 export type BookSearchPayload = {
-  search: string
+  title?: string
+  isbn?: string[]
+  categories?: string[]
+  authorName?: string
+  pagination?: {
+    page?: number
+    itemsPerPage?: number
+  }
 }

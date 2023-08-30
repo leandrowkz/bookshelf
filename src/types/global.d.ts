@@ -1,3 +1,5 @@
+import type { CollectionType } from './CollectionType'
+
 declare global {
   type Nullable<T> = T | null
 
@@ -5,7 +7,9 @@ declare global {
 
   type Falsable<T> = T | false
 
-  type BooksProvider = 'google-books' | 'open-library'
+  type Async<T> = Promise<T> | T
+
+  type BookProviderType = 'google-books' | 'open-library'
 
   type RequestPayload = {
     path: string
@@ -14,13 +18,20 @@ declare global {
     params?: RequestQuery
   }
 
-  type RequestQuery = Record<string, string | boolean | number | null>
+  type RequestQuery = Record<string, string | string[] | boolean | number | number[] | null>
 
   type RequestHeaders = Record<string, string | boolean | number>
 
   type RequestBody = Record<string, string | boolean | number | object | null>
 
-  type RequestParamsWithId = { params: { id: string } }
+  type RequestParamsWithId = {
+    params: {
+      bookId: string
+      authorId: string
+      categoryId: string
+      collectionId: CollectionType
+    }
+  }
 
   type CountryCode =
     | 'AD'

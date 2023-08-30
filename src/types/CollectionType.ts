@@ -1,4 +1,4 @@
-export type BookCollectionType =
+export type CollectionType =
   | 'want-read'
   | 'currently-reading'
   | 'completed-readings'

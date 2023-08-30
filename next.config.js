@@ -4,9 +4,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 module.exports = withBundleAnalyzer({
   reactStrictMode: false,
-  pageExtensions: ['tsx'],
   experimental: {
     appDir: true,
+    serverActions: true,
   },
   eslint: {
     ignoreDuringBuilds: true,

@@ -1,10 +1,14 @@
 import type { Author } from './Author'
+import type { BookPurchaseInfo } from './BookPurchaseInfo'
+import type { BookType } from './BookType'
+import type { UserBookInfo } from './UserBookInfo'
 
 export type Book = {
   id: string
-  isbn: string[]
+  type: BookType
+  isbn: string
   title: string
-  description: Nullable<string>
+  description?: Nullable<string>
   authors: Author[]
   categories: string[]
   cover: Nullable<string>
@@ -13,4 +17,7 @@ export type Book = {
   pageCount: Nullable<number>
   language: LanguageCode
   rating: Nullable<number>
+  preview: Nullable<string>
+  purchaseInfo?: BookPurchaseInfo[]
+  userInfo?: UserBookInfo
 }

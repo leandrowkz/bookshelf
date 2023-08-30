@@ -1,11 +1,11 @@
 import { apiSlice } from '@/store/api'
-import type { BookCollectionType } from '@/types/BookCollectionType'
+import type { CollectionType } from '@/types/CollectionType'
 
 export const collectionsApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getCollectionDetails: builder.query({
-      query: (collectionId: BookCollectionType) => `/collections/${collectionId}`,
-      providesTags: ['BookCollectionDetails'],
+      query: (collectionId: CollectionType) => `/collections/${collectionId}`,
+      providesTags: ['CollectionDetails'],
     }),
   }),
 })

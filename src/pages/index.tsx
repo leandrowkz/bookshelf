@@ -11,7 +11,7 @@ export default function Page() {
     isLoading,
     isError,
     isSuccess,
-  } = useSearchBooksQuery({ search: 'torto arado' })
+  } = useSearchBooksQuery({ title: 'scott fitzgerald' })
 
   if (isLoading) {
     content = 'Loading books...'
