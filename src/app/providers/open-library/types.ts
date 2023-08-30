@@ -141,7 +141,7 @@ export type Work = {
   }
 }
 
-type Book = {
+export type Edition = {
   type: { key: '/type/edition' }
   key: string
   title: string
