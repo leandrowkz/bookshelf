@@ -7,7 +7,7 @@ export type AuthBoxProps = BoxProps & {
   subtitle?: ReactNode
 }
 
-export default function AuthBox({ icon, title, subtitle, children, ...props }: AuthBoxProps) {
+export function AuthBox({ icon, title, subtitle, children, ...props }: AuthBoxProps) {
   return (
     <Box {...props}>
       {icon && (

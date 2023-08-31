@@ -1,5 +1,5 @@
 import { Layout } from '@/components'
-import AuthBox from '@/components/AuthBox/AuthBox'
+import { AuthBox } from '@/components/AuthBox/AuthBox'
 import { Button, PasswordInput } from '@mantine/core'
 import { IconLockCheck, IconLockCog } from '@tabler/icons-react'
 

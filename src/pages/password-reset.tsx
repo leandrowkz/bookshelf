@@ -1,5 +1,5 @@
 import { Layout } from '@/components'
-import AuthBox from '@/components/AuthBox/AuthBox'
+import { AuthBox } from '@/components/AuthBox/AuthBox'
 import { createStyles, TextInput, Button, Group, Anchor, Center, Box, rem } from '@mantine/core'
 import { IconArrowLeft, IconLockBolt } from '@tabler/icons-react'
 

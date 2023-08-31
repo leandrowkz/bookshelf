@@ -11,7 +11,7 @@ export const useStyles = createStyles((theme) => ({
   content: {
     paddingBlock: theme.spacing.lg,
     paddingInline: theme.other.spacing.container,
-    paddingTop: `calc(calc(${theme.spacing.lg} + ${theme.other.headerHeight}) * 1.2)`,
+    paddingTop: `calc(${theme.spacing.lg} + ${theme.other.headerHeight})`,
     maxWidth: '100%',
   },
 }))

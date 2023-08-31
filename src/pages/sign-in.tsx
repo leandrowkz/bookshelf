@@ -1,20 +1,16 @@
 import { Layout } from '@/components'
-import AuthBox from '@/components/AuthBox/AuthBox'
+import { AuthBox } from '@/components/AuthBox/AuthBox'
 import { ButtonAuthGoogle } from '@/components/ButtonAuthGoogle/ButtonAuthGoogle'
-import { TextInput, PasswordInput, Anchor, Group, Button, Divider, Box } from '@mantine/core'
-import { useSupabaseClient } from '@supabase/auth-helpers-react'
+import { useAuthSignInWithEmail } from '@/hooks/useAuthSignInWithEmail'
+import { TextInput, PasswordInput, Anchor, Group, Button, Divider, Box, Alert } from '@mantine/core'
 import { IconBook } from '@tabler/icons-react'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
 
 export default function AuthenticationTitle() {
-  const supabase = useSupabaseClient()
   const router = useRouter()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const { form, error, isLoading, isSuccess, handleSignIn } = useAuthSignInWithEmail()
 
-  const handleLogin = async () => {
-    await supabase.auth.signInWithPassword({ email, password })
+  if (isSuccess) {
     router.push('/')
   }
 
@@ -40,32 +36,38 @@ export default function AuthenticationTitle() {
 
         <Divider label="Or continue with email" labelPosition="center" my="lg" />
 
-        <TextInput
-          label="Email"
-          placeholder="you@email.com"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <form onSubmit={form.onSubmit(handleSignIn)}>
+          <TextInput
+            label="Email"
+            placeholder="you@email.com"
+            required
+            {...form.getInputProps('email')}
+          />
 
-        <PasswordInput
-          label="Password"
-          placeholder="Your password"
-          required
-          mt="md"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+          <PasswordInput
+            label="Password"
+            placeholder="Your password"
+            required
+            mt="md"
+            {...form.getInputProps('password')}
+          />
 
-        <Group position="apart" mt="md">
-          <Anchor href="/password-reset" size="sm">
-            Forgot password?
-          </Anchor>
-        </Group>
+          <Group position="apart" mt="md">
+            <Anchor href="/password-reset" size="sm">
+              Forgot password?
+            </Anchor>
+          </Group>
 
-        <Button fullWidth mt="lg" onClick={handleLogin}>
-          Sign in
-        </Button>
+          {error && (
+            <Alert title="A problem occurred" color="red" mt="lg">
+              {error}
+            </Alert>
+          )}
+
+          <Button fullWidth mt="lg" type="submit" loading={isLoading}>
+            Sign in
+          </Button>
+        </form>
       </AuthBox>
     </Layout>
   )

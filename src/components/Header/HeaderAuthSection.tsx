@@ -2,15 +2,15 @@ import { useRouter } from 'next/navigation'
 import { Avatar, Button, Group, Menu } from '@mantine/core'
 import { useAuthUser } from '@/hooks/useAuthUser'
 import { IconBook2, IconHeart, IconLockBolt, IconLogout } from '@tabler/icons-react'
-import { useSupabase } from '@/hooks/useSupabase'
+import { useAuthSignOut } from '@/hooks/useAuthSignOut'
 
 export function HeaderAuthSection() {
   const router = useRouter()
   const user = useAuthUser()
-  const supabase = useSupabase()
+  const { handleSignOut } = useAuthSignOut()
 
-  const handleSignOut = () => {
-    supabase.auth.signOut()
+  const handleClick = async () => {
+    await handleSignOut()
     router.push('/')
   }
 
@@ -34,7 +34,7 @@ export function HeaderAuthSection() {
             Update password
           </Menu.Item>
           <Menu.Divider />
-          <Menu.Item color="red" icon={<IconLogout />} onClick={handleSignOut}>
+          <Menu.Item color="red" icon={<IconLogout />} onClick={handleClick}>
             Sign out
           </Menu.Item>
         </Menu.Dropdown>
