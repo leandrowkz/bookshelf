@@ -1,53 +1,44 @@
 import { Layout } from '@/components'
-import {
-  TextInput,
-  PasswordInput,
-  Anchor,
-  Paper,
-  Title,
-  Text,
-  Container,
-  Group,
-  Button,
-  Divider,
-} from '@mantine/core'
-import { IconBrandGoogle } from '@tabler/icons-react'
+import AuthBox from '@/components/AuthBox/AuthBox'
+import { ButtonAuthGoogle } from '@/components/ButtonAuthGoogle/ButtonAuthGoogle'
+import { TextInput, PasswordInput, Anchor, Group, Button, Divider, Box } from '@mantine/core'
+import { IconUsers } from '@tabler/icons-react'
 
 export default function Page() {
   return (
     <Layout>
-      <Container size={460} my={40}>
-        <Title
-          align="center"
-          sx={(theme) => ({ fontFamily: `Greycliff CF, ${theme.fontFamily}`, fontWeight: 900 })}
-        >
-          Create your account
-        </Title>
-        <Text color="dimmed" size="sm" align="center" mt={5}>
-          Already have an account?{' '}
-          <Anchor size="sm" href="/sign-in">
-            Sign in
-          </Anchor>
-        </Text>
+      <AuthBox
+        maw={460}
+        mx="auto"
+        icon={<IconUsers size={42} />}
+        title="Create your account"
+        subtitle={
+          <Box>
+            Already have an account?{' '}
+            <Anchor size="sm" href="/sign-in">
+              Sign in
+            </Anchor>
+          </Box>
+        }
+      >
+        <Group grow mb="md">
+          <ButtonAuthGoogle label="Sign up using Google" />
+        </Group>
 
-        <Paper withBorder shadow="md" p={30} mt="lg" radius="md">
-          <Group grow mb="md" mt="md">
-            <Button leftIcon={<IconBrandGoogle />} variant="default">
-              Sign up using with Google
-            </Button>
-          </Group>
+        <Divider label="Or continue with email" labelPosition="center" my="lg" />
 
-          <Divider label="Or continue with email" labelPosition="center" my="lg" />
+        <TextInput label="Name" placeholder="John Doe" required />
 
-          <TextInput label="Name" placeholder="John Doe" required />
-          <TextInput label="Email" placeholder="you@mantine.dev" required mt="md" />
-          <PasswordInput label="Password" placeholder="Your password" required mt="md" />
-          <PasswordInput label="Confirm password" placeholder="Your password" required mt="md" />
-          <Button fullWidth mt="lg">
-            Sign up using email
-          </Button>
-        </Paper>
-      </Container>
+        <TextInput label="Email" placeholder="you@email.com" required mt="md" />
+
+        <PasswordInput label="Password" placeholder="Your password" required mt="md" />
+
+        <PasswordInput label="Confirm password" placeholder="Your password" required mt="md" />
+
+        <Button fullWidth mt="lg">
+          Sign up using email
+        </Button>
+      </AuthBox>
     </Layout>
   )
 }

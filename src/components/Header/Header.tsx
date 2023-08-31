@@ -5,6 +5,7 @@ import { BookshelfLogo } from '@/components/BookshelfLogo/BookshelfLogo'
 import { ColorSchemeToggle } from '../ColorSchemaToggle/ColorSchemaToggle'
 import { useMenuLinks } from '@/hooks/useMenuLinks'
 import { useRouter, usePathname } from 'next/navigation'
+import { HeaderAuthSection } from './HeaderAuthSection'
 
 export function Header() {
   const router = useRouter()
@@ -39,10 +40,7 @@ export function Header() {
         </Group>
 
         <Group className={classes.social} position="right" noWrap>
-          <Button onClick={() => router.push('/sign-in')} variant="default">
-            Sign in
-          </Button>
-          <Button onClick={() => router.push('/sign-up')}>Sign up</Button>
+          <HeaderAuthSection />
           <ColorSchemeToggle size="xl" />
         </Group>
       </Box>

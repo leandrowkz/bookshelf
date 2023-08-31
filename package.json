@@ -28,6 +28,7 @@
     "@next/bundle-analyzer": "^13.1.6",
     "@reduxjs/toolkit": "^1.9.5",
     "@supabase/auth-helpers-nextjs": "^0.7.4",
+    "@supabase/auth-helpers-react": "^0.4.2",
     "@supabase/supabase-js": "^2.33.1",
     "@tabler/icons": "^1.107.0",
     "@tabler/icons-react": "^2.4.0",
