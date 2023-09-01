@@ -1,7 +1,6 @@
-import { type ReactNode, useState } from 'react'
+import { useState } from 'react'
 import { useSupabase } from './useSupabase'
 import { hasLength, isEmail, matchesField, useForm } from '@mantine/form'
-import { Anchor, Box } from '@mantine/core'
 
 export type SignUpForm = {
   name: string
@@ -14,7 +13,7 @@ export function useAuthSignUp() {
   const supabase = useSupabase()
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
-  const [error, setError] = useState<ReactNode>(null)
+  const [error, setError] = useState<string>('')
   const form = useForm<SignUpForm>({
     initialValues: {
       name: '',
@@ -47,12 +46,7 @@ export function useAuthSignUp() {
     if (error) {
       setError(error.message)
     } else if (data.user?.identities?.length === 0) {
-      setError(
-        <Box>
-          An account already exists with this email. Try{' '}
-          <Anchor href="/auth/password-reset">reset your password</Anchor>.
-        </Box>
-      )
+      setError('USER_ALREADY_EXISTS_WITH_THIS_EMAIL')
     } else {
       setIsSuccess(true)
     }

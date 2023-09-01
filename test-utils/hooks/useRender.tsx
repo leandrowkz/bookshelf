@@ -1,4 +1,11 @@
-import { render as testingLibraryRender, screen } from '@testing-library/react'
+import {
+  act,
+  render as testingLibraryRender,
+  renderHook,
+  screen,
+  within,
+  waitFor,
+} from '@testing-library/react'
 import { MantineProvider } from '@mantine/core'
 import { useTheme } from '@/hooks/useTheme'
 
@@ -14,7 +21,11 @@ function render(ui: React.ReactNode) {
 
 export function useRender() {
   return {
+    act,
     render,
+    renderHook,
     screen,
+    within,
+    waitFor,
   }
 }

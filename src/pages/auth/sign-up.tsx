@@ -81,7 +81,14 @@ export default function Page() {
 
             {error && (
               <Alert title="A problem occurred" color="red" mt="lg">
-                {error}
+                {error === 'USER_ALREADY_EXISTS_WITH_THIS_EMAIL' ? (
+                  <Box>
+                    An account already exists with this email. Try{' '}
+                    <Anchor href="/auth/password-reset">reset your password</Anchor>.
+                  </Box>
+                ) : (
+                  error
+                )}
               </Alert>
             )}
 
