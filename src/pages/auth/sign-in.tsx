@@ -11,7 +11,7 @@ export default function AuthenticationTitle() {
   const { form, error, isLoading, isSuccess, handleSignIn } = useAuthSignInWithEmail()
 
   if (isSuccess) {
-    router.push('/')
+    router.push('/collections')
   }
 
   return (
