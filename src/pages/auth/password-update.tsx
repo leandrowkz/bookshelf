@@ -17,7 +17,7 @@ export default function PasswordUpdate() {
       icon: <IconLockCheck size={14} />,
       color: 'green',
     })
-    router.push('/')
+    router.push('/collections')
   }
 
   return (
