@@ -20,7 +20,7 @@ async function middlewareRoutesAPI(req: NextRequest, res: NextResponse) {
 }
 
 async function middlewareAuthPages(req: NextRequest, res: NextResponse) {
-  const protectedPages = ['/auth/password-update']
+  const protectedPages = ['/auth/password-update', '/collections']
 
   if (protectedPages.includes(req.nextUrl.pathname)) {
     const supabase = createMiddlewareClient({ req, res })
