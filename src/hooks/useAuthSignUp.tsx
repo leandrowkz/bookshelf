@@ -50,7 +50,7 @@ export function useAuthSignUp() {
       setError(
         <Box>
           An account already exists with this email. Try{' '}
-          <Anchor href="/password-reset">reset your password</Anchor>.
+          <Anchor href="/auth/password-reset">reset your password</Anchor>.
         </Box>
       )
     } else {

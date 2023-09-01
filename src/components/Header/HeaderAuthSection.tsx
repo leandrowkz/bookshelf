@@ -30,7 +30,7 @@ export function HeaderAuthSection() {
           <Menu.Item icon={<IconHeart />} onClick={() => router.push('/favorites')}>
             Favorites
           </Menu.Item>
-          <Menu.Item icon={<IconLockBolt />} onClick={() => router.push('/password-update')}>
+          <Menu.Item icon={<IconLockBolt />} onClick={() => router.push('/auth/password-update')}>
             Update password
           </Menu.Item>
           <Menu.Divider />
@@ -44,10 +44,10 @@ export function HeaderAuthSection() {
 
   return (
     <Group position="right" noWrap>
-      <Button onClick={() => router.push('/sign-in')} variant="default">
+      <Button onClick={() => router.push('/auth/sign-in')} variant="default">
         Sign in
       </Button>
-      <Button onClick={() => router.push('/sign-up')}>Sign up</Button>
+      <Button onClick={() => router.push('/auth/sign-up')}>Sign up</Button>
     </Group>
   )
 }

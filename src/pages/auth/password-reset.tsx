@@ -32,7 +32,7 @@ export default function ForgotPassword() {
       >
         <TextInput label="Your email" placeholder="you@email.com" required />
         <Group position="apart" mt="lg" className={classes.controls}>
-          <Anchor color="dimmed" size="sm" className={classes.control} href="/sign-in">
+          <Anchor color="dimmed" size="sm" className={classes.control} href="/auth/sign-in">
             <Center inline>
               <IconArrowLeft size={rem(12)} stroke={1.5} />
               <Box ml={5}>Back to the login page</Box>

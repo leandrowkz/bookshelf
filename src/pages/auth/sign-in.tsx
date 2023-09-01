@@ -24,7 +24,7 @@ export default function AuthenticationTitle() {
         subtitle={
           <Box>
             Do not have an account yet?{' '}
-            <Anchor size="sm" href="/sign-up">
+            <Anchor size="sm" href="/auth/sign-up">
               Create account
             </Anchor>
           </Box>
@@ -53,7 +53,7 @@ export default function AuthenticationTitle() {
           />
 
           <Group position="apart" mt="md">
-            <Anchor href="/password-reset" size="sm">
+            <Anchor href="/auth/password-reset" size="sm">
               Forgot password?
             </Anchor>
           </Group>

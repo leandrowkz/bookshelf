@@ -35,7 +35,7 @@ export default function Page() {
           subtitle={
             <Box>
               Already have an account?{' '}
-              <Anchor size="sm" href="/sign-in">
+              <Anchor size="sm" href="/auth/sign-in">
                 Sign in
               </Anchor>
             </Box>

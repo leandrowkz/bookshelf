@@ -34,12 +34,12 @@ const footerLinks = [
       },
       {
         label: 'Sign in',
-        link: '/sign-in',
+        link: '/auth/sign-in',
         target: '',
       },
       {
         label: 'Sign up',
-        link: '/sign-up',
+        link: '/auth/sign-up',
         target: '',
       },
     ],
