@@ -4,6 +4,7 @@ import { type NextRequest, NextResponse } from 'next/server'
 export async function middleware(req: NextRequest) {
   const res = NextResponse.next()
 
+  // If more middleware is added, wrap around a Promise.all()
   await middlewareRoutesAPI(req, res)
 
   // Needs to be the last one, so redirect works properly
@@ -21,7 +22,7 @@ async function middlewareRoutesAPI(req: NextRequest, res: NextResponse) {
 async function middlewareAuthPages(req: NextRequest, res: NextResponse) {
   const protectedPages = ['/auth/password-update']
 
-  if (req.nextUrl.pathname.startsWith(protectedPages[0])) {
+  if (protectedPages.includes(req.nextUrl.pathname)) {
     const supabase = createMiddlewareClient({ req, res })
 
     const {
