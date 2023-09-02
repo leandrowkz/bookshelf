@@ -1,4 +1,4 @@
-import { type ReactNode, useState } from 'react'
+import { useState } from 'react'
 import { useSupabase } from './useSupabase'
 import { hasLength, isEmail, useForm } from '@mantine/form'
 
@@ -11,7 +11,7 @@ export function useAuthSignInWithEmail() {
   const supabase = useSupabase()
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
-  const [error, setError] = useState<ReactNode>(null)
+  const [error, setError] = useState('')
   const form = useForm<SignInForm>({
     initialValues: {
       email: '',
