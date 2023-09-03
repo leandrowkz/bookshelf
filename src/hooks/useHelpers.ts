@@ -5,11 +5,13 @@ function getInlineAuthors(authors: Author[], separator = ', ') {
 }
 
 function getYearFromDateString(date: string) {
-  if (!date) {
-    return
+  const timestamp = Date.parse(date)
+
+  if (isNaN(timestamp)) {
+    return ''
   }
 
-  return new Date(date).getFullYear().toString()
+  return new Date(timestamp).getFullYear().toString()
 }
 
 export function useHelpers() {
