@@ -9,25 +9,25 @@ export function CollectionsSection() {
       <Group spacing={0} mt="md">
         <Button variant="light">
           Want to read{' '}
-          <Badge size="sm" ml={5} color="dark">
+          <Badge size="sm" ml={5} variant="filled">
             18
           </Badge>
         </Button>
         <Button variant="subtle">
           Currently reading
-          <Badge size="sm" ml={5} color="blue">
+          <Badge size="sm" ml={5}>
             1
           </Badge>
         </Button>
         <Button variant="subtle">
           Completed
-          <Badge size="sm" ml={5} color="green">
+          <Badge size="sm" ml={5}>
             14
           </Badge>
         </Button>
         <Button variant="subtle">
           Dropped
-          <Badge size="sm" ml={5} color="orange">
+          <Badge size="sm" ml={5}>
             1
           </Badge>
         </Button>

@@ -1,5 +1,5 @@
 import { TextInput, PasswordInput, Anchor, Group, Button, Divider, Box, Alert } from '@mantine/core'
-import { IconMailForward, IconUsers } from '@tabler/icons-react'
+import { IconMailCheck, IconUsers } from '@tabler/icons-react'
 import { useRouter } from 'next/navigation'
 import { Layout } from '@/components'
 import { AuthBox } from '@/components/AuthBox/AuthBox'
@@ -16,9 +16,9 @@ export default function Page() {
       {isSuccess && (
         <ResultBox
           status="default"
-          icon={<IconMailForward size={42} />}
-          title="We are almost there"
-          subtitle="You must confirm the email we just sent you."
+          icon={<IconMailCheck size={42} />}
+          title="Confirm your email"
+          subtitle="We are almost there! You just need to confirm the email we just sent you."
           actions={[
             <Button key="button-action" onClick={() => router.push('/')}>
               Go home

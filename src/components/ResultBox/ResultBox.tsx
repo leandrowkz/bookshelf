@@ -59,12 +59,12 @@ export function ResultBox({
         </ThemeIcon>
       </Box>
       {title && (
-        <Title align="center" mb="xs" order={2}>
+        <Title align="center" mt="md" order={2}>
           {title}
         </Title>
       )}
       {subtitle && (
-        <Text ta="center" mb="md">
+        <Text ta="center" mb={30} mt={20} fz="lg">
           {subtitle}
         </Text>
       )}
