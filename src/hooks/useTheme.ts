@@ -31,6 +31,8 @@ export function useTheme() {
 
   const matches = useMediaQuery(`(max-width: ${breakpoints.md})`)
 
+  console.log(matches)
+
   const theme: MantineThemeOverride = {
     primaryColor: 'violet',
     fontFamily: inter.style.fontFamily,
