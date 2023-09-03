@@ -1,10 +1,10 @@
 import { Layout } from '@/components'
 import { Grid } from '@mantine/core'
-import { CollectionsSection } from './CollectionsSection'
-import { DiscoverBooksSection } from './DiscoverBooksSection'
-import { ChallengesSection } from './ChallengesSection'
+import { CollectionsSection } from '@/components/collections/CollectionsSection'
+import { DiscoverBooksSection } from '@/components/collections/DiscoverBooksSection'
+import { ChallengesSection } from '@/components/collections/ChallengesSection'
 
-export default function Dashboard() {
+export default function CollectionsPage() {
   return (
     <Layout>
       <Grid>
