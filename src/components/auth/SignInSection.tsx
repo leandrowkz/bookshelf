@@ -1,5 +1,5 @@
 import { AuthBox } from './AuthBox'
-import { ButtonAuthGoogle } from '@/components/ButtonAuthGoogle/ButtonAuthGoogle'
+import { AuthButtonGoogle } from './AuthButtonGoogle'
 import { useAuthSignInWithEmail } from '@/hooks/useAuthSignInWithEmail'
 import { TextInput, PasswordInput, Anchor, Group, Button, Divider, Box, Alert } from '@mantine/core'
 import { IconBook } from '@tabler/icons-react'
@@ -29,7 +29,7 @@ export function SignInSection() {
       }
     >
       <Group grow mb="md">
-        <ButtonAuthGoogle label="Sign in with Google" data-testid="btn-google" />
+        <AuthButtonGoogle label="Sign in with Google" data-testid="btn-google" />
       </Group>
 
       <Divider label="Or continue with email" labelPosition="center" my="lg" />

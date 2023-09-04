@@ -3,15 +3,15 @@ import { Button } from '@mantine/core'
 import { IconBrandGoogle } from '@tabler/icons-react'
 import { useAuthSignInWithProvider } from '@/hooks/useAuthSignInWithProvider'
 
-export type ButtonAuthGoogleProps = HTMLAttributes<HTMLButtonElement> & {
+export type AuthButtonGoogle = HTMLAttributes<HTMLButtonElement> & {
   label?: ReactNode
 }
 
-export function ButtonAuthGoogle({
+export function AuthButtonGoogle({
   label = 'Sign in with Google',
   onClick,
   ...props
-}: ButtonAuthGoogleProps) {
+}: AuthButtonGoogle) {
   const { isLoading, handleSignIn } = useAuthSignInWithProvider('google')
 
   const handleClick = async (e: ReactMouseEvent<HTMLButtonElement, MouseEvent>) => {

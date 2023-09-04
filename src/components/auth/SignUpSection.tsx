@@ -2,7 +2,7 @@ import { TextInput, PasswordInput, Anchor, Group, Button, Divider, Box, Alert } 
 import { IconMailCheck, IconUsers } from '@tabler/icons-react'
 import { useRouter } from 'next/router'
 import { AuthBox } from './AuthBox'
-import { ButtonAuthGoogle } from '@/components/ButtonAuthGoogle/ButtonAuthGoogle'
+import { AuthButtonGoogle } from './AuthButtonGoogle'
 import { ResultBox } from '@/components/ResultBox/ResultBox'
 import { useAuthSignUp } from '@/hooks/useAuthSignUp'
 
@@ -42,7 +42,7 @@ export function SignUpSection() {
       }
     >
       <Group grow mb="md">
-        <ButtonAuthGoogle label="Sign up using Google" data-testid="btn-google" />
+        <AuthButtonGoogle label="Sign up using Google" data-testid="btn-google" />
       </Group>
 
       <form onSubmit={form.onSubmit(handleSignUp)}>
