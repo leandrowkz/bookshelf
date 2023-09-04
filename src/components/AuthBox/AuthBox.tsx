@@ -12,7 +12,7 @@ export function AuthBox({ icon, title, subtitle, children, ...props }: AuthBoxPr
     <Box {...props}>
       {icon && (
         <Box ta="center" mb="md">
-          <ThemeIcon size={92} radius="lg" variant="light">
+          <ThemeIcon size={92} radius="lg" variant="light" data-testid="auth-box-icon">
             {icon}
           </ThemeIcon>
         </Box>
