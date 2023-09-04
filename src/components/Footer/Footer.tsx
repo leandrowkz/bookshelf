@@ -3,7 +3,6 @@ import { IconBrandTwitter, IconBrandLinkedin, IconBrandGithub } from '@tabler/ic
 import { useMenuLinks } from '@/hooks/useMenuLinks'
 import { useStyles } from './Footer.styles'
 import { BookshelfLogo } from '../BookshelfLogo/BookshelfLogo'
-import Link from 'next/link'
 
 export function Footer() {
   const { classes } = useStyles()
@@ -44,7 +43,7 @@ export function Footer() {
       <Box className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
           © {new Date().getFullYear()} Bookshelf. Made with 💜 by{' '}
-          <Link href="https://github.com/leandrowkz">@leandrowkz</Link>.
+          <Anchor href="https://github.com/leandrowkz">@leandrowkz</Anchor>.
         </Text>
 
         <Group spacing="sm" className={classes.social} position="right" noWrap>

@@ -7,11 +7,13 @@ export const useStyles = createStyles((theme) => ({
     gridTemplateRows: '1fr auto',
     minHeight: '100vh',
     maxWidth: '100vw',
+    overflow: 'hidden',
   },
   content: {
     paddingBlock: theme.spacing.lg,
     paddingInline: theme.other.spacing.container,
-    paddingTop: `calc(calc(${theme.spacing.lg} + ${theme.other.headerHeight}) * 1.2)`,
-    maxWidth: '100%',
+    paddingTop: `calc(${theme.spacing.lg} + ${theme.other.headerHeight})`,
+    maxWidth: '100vw',
+    boxSizing: 'border-box',
   },
 }))

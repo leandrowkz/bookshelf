@@ -1,9 +1,5 @@
-import { createClient } from '@supabase/supabase-js'
-
-const supabaseUrl = String(process.env.NEXT_PUBLIC_SUPABASE_PROJECT_URL)
-const supabaseKey = String(process.env.NEXT_PUBLIC_SUPABASE_CLIENT_KEY)
-const supabase = createClient(supabaseUrl, supabaseKey)
+import { useSupabaseClient } from '@supabase/auth-helpers-react'
 
 export function useSupabase() {
-  return supabase
+  return useSupabaseClient()
 }

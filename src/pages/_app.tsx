@@ -5,6 +5,8 @@ import Head from 'next/head'
 import { getCookie, setCookie } from 'cookies-next'
 import { MantineProvider, type ColorScheme, ColorSchemeProvider } from '@mantine/core'
 import { Notifications } from '@mantine/notifications'
+import { createPagesBrowserClient } from '@supabase/auth-helpers-nextjs'
+import { SessionContextProvider } from '@supabase/auth-helpers-react'
 import { useTheme } from '@/hooks/useTheme'
 import { wrapper } from '@/store'
 
@@ -14,6 +16,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { store, props: storeProps } = wrapper.useWrappedStore(props)
   const { pageProps } = storeProps
   const [colorScheme, setColorScheme] = useState<ColorScheme>(props.colorScheme)
+  const [supabaseClient] = useState(() => createPagesBrowserClient())
 
   const toggleColorScheme = (value?: ColorScheme) => {
     const nextColorScheme = value || (colorScheme === 'dark' ? 'light' : 'dark')
@@ -29,14 +32,19 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
 
-      <Provider store={store}>
-        <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-          <MantineProvider theme={{ colorScheme, ...theme }} withGlobalStyles withNormalizeCSS>
-            <Component {...pageProps} />
-            <Notifications />
-          </MantineProvider>
-        </ColorSchemeProvider>
-      </Provider>
+      <SessionContextProvider
+        supabaseClient={supabaseClient}
+        initialSession={pageProps.initialSession}
+      >
+        <Provider store={store}>
+          <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+            <MantineProvider theme={{ colorScheme, ...theme }} withGlobalStyles withNormalizeCSS>
+              <Component {...pageProps} />
+              <Notifications />
+            </MantineProvider>
+          </ColorSchemeProvider>
+        </Provider>
+      </SessionContextProvider>
     </>
   )
 }

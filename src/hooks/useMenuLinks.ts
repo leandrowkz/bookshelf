@@ -8,7 +8,7 @@ const headerLinks = [
     label: 'Favorites',
   },
   {
-    link: '/collection',
+    link: '/collections',
     label: 'My collection',
   },
 ]
@@ -23,18 +23,23 @@ const footerLinks = [
         target: '',
       },
       {
-        label: 'My lists',
-        link: '/lists',
+        label: 'Favorites',
+        link: '/favorites',
+        target: '',
+      },
+      {
+        label: 'My collection',
+        link: '/collections',
         target: '',
       },
       {
         label: 'Sign in',
-        link: '/sign-in',
+        link: '/auth/sign-in',
         target: '',
       },
       {
         label: 'Sign up',
-        link: '/sign-up',
+        link: '/auth/sign-up',
         target: '',
       },
     ],
