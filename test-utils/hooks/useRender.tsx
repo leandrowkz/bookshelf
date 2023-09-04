@@ -1,3 +1,4 @@
+import { type PropsWithChildren } from 'react'
 import {
   act,
   render as testingLibraryRender,
@@ -9,13 +10,14 @@ import {
 import { MantineProvider } from '@mantine/core'
 import { useTheme } from '@/hooks/useTheme'
 
-function render(ui: React.ReactNode) {
+function Wrapper({ children }: PropsWithChildren) {
   const { theme } = useTheme()
+  return <MantineProvider theme={theme}>{children}</MantineProvider>
+}
 
+function render(ui: React.ReactNode) {
   return testingLibraryRender(<>{ui}</>, {
-    wrapper: ({ children }: { children: React.ReactNode }) => (
-      <MantineProvider theme={theme}>{children}</MantineProvider>
-    ),
+    wrapper: ({ children }: PropsWithChildren) => <Wrapper>{children}</Wrapper>,
   })
 }
 

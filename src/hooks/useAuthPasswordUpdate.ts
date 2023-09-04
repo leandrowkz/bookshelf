@@ -24,8 +24,9 @@ export function useAuthPasswordUpdate() {
   })
 
   const handlePasswordUpdate = async (values: PasswordUpdateForm) => {
-    setIsLoading(true)
     setError('')
+    setIsLoading(true)
+    setIsSuccess(false)
 
     const { error } = await supabase.auth.updateUser({ password: values.password })
 
