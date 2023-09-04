@@ -9,7 +9,7 @@ import {
 } from '@tabler/icons-react'
 
 export type ResultBoxProps = BoxProps & {
-  status: 'default' | 'info' | 'error' | 'warning' | 'success'
+  status?: 'default' | 'info' | 'error' | 'warning' | 'success'
   title?: ReactNode
   subtitle?: ReactNode
   actions?: ReactNode[]
@@ -54,7 +54,13 @@ export function ResultBox({
   return (
     <Box maw={460} mx="auto" {...props}>
       <Box ta="center" mb="md">
-        <ThemeIcon size={92} radius="lg" variant="light" color={iconMapped.color}>
+        <ThemeIcon
+          size={92}
+          radius="lg"
+          variant="light"
+          color={iconMapped.color}
+          data-testid="result-box-icon"
+        >
           {icon || iconMapped.icon}
         </ThemeIcon>
       </Box>
@@ -68,9 +74,11 @@ export function ResultBox({
           {subtitle}
         </Text>
       )}
-      <Flex align="center" justify="center">
-        {actions?.map((action) => action)}
-      </Flex>
+      {actions?.length && (
+        <Flex align="center" justify="center" data-testid="result-box-actions">
+          {actions?.map((action) => action)}
+        </Flex>
+      )}
     </Box>
   )
 }

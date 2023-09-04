@@ -39,7 +39,7 @@ export function ChallengesSection() {
   const { classes } = useStyles()
 
   return (
-    <Paper radius="lg" className={classes.card}>
+    <Paper radius="lg" className={classes.card} data-testid="challenge-card">
       <ThemeIcon className={classes.icon} size={ICON_SIZE} radius={ICON_SIZE}>
         <IconBook size="2rem" stroke={1.5} />
       </ThemeIcon>

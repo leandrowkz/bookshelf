@@ -56,7 +56,7 @@ export function DiscoverBooksSection() {
   ]
 
   return (
-    <Box mt="xl">
+    <Box mt="xl" data-testid="discover-books-section">
       <Title order={2}>Discover new books</Title>
       <ContainerScrollable mt="md">
         <Flex gap="md" wrap="nowrap">

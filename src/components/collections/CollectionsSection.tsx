@@ -4,7 +4,7 @@ import { Badge, Box, Button, Group, Title } from '@mantine/core'
 
 export function CollectionsSection() {
   return (
-    <Box mt="lg">
+    <Box mt="lg" data-testid="collections-section">
       <Title order={2}>My collection</Title>
       <Group spacing={0} mt="md">
         <Button variant="light">
