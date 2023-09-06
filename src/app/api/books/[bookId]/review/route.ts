@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server'
 import { getUserBookInfo } from '@/app/hooks/getUserBookInfo'
-import { getLoggedUser } from '@/app/hooks/getLoggedUser'
+import { useAuthUser } from '@/app/hooks/useAuthUser'
 
 export async function GET(request: Request, { params }: RequestParamsWithId) {
-  const user = await getLoggedUser()
+  const user = await useAuthUser()
 
   const { review } = await getUserBookInfo(String(user?.id), params.bookId)
 

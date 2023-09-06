@@ -1,8 +1,7 @@
 import { useSupabase } from './useSupabase'
-
 import { type User } from '@/types/User'
 
-export async function getLoggedUser(): Promise<User | undefined> {
+export async function useAuthUser(): Promise<User | undefined> {
   const supabase = useSupabase()
   const { data } = await supabase.auth.getUser()
 
