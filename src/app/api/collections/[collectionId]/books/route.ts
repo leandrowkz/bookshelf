@@ -3,7 +3,6 @@ import { google } from '@/app/hooks/useBooksProvider'
 import { useSupabase } from '@/app/hooks/useSupabase'
 import type { Book } from '@/types/Book'
 import { useAuthUser } from '@/app/hooks/useAuthUser'
-import { getCollectionBookExists } from '@/app/hooks/getCollectionBookExists'
 
 export async function GET(request: Request, { params }: RequestParamsWithId) {
   try {
@@ -33,35 +32,6 @@ export async function GET(request: Request, { params }: RequestParamsWithId) {
     }
 
     return NextResponse.json(books)
-  } catch (e) {
-    console.error(e)
-    return NextResponse.json([])
-  }
-}
-
-export async function POST(request: Request, { params }: RequestParamsWithId) {
-  try {
-    const book: Nullable<Book> = null
-    const supabase = useSupabase()
-    const user = await useAuthUser()
-
-    if (user) {
-      const bookDetails = await google.getBookDetails(params.bookId)
-      const bookExisting = await getCollectionBookExists(
-        params.collectionId,
-        bookDetails.isbn,
-        user.id
-      )
-
-      if (!bookExisting) {
-        await supabase.from('users_books').insert({
-          book_isbn: bookDetails.isbn,
-          user_id: user.id,
-        })
-      }
-    }
-
-    return NextResponse.json(book)
   } catch (e) {
     console.error(e)
     return NextResponse.json([])

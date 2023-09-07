@@ -22,6 +22,16 @@ export type UserBookRow = {
 
 const supabase = useSupabase()
 
+async function getCountBooksInCollection(collectionKey: CollectionType, userId: string) {
+  const { count } = await supabase
+    .from('users_books')
+    .select('*', { count: 'exact' })
+    .eq('user_id', userId)
+    .eq('collection_key', collectionKey)
+
+  return count || 0
+}
+
 async function isBookInCollection(bookIsbn: string, collectionKey: CollectionType, userId: string) {
   const { data } = await supabase
     .from('users_books')
@@ -132,6 +142,7 @@ export const useCollectionRepository = () => ({
   addBookAsFavorite,
   addBookReview,
   addBookToCollection,
+  getCountBooksInCollection,
   isBookInCollection,
   removeBookAsFavorite,
   removeBookReview,

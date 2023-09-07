@@ -1,9 +1,11 @@
 import { NextResponse } from 'next/server'
 import type { Collection } from '@/types/Collection'
-import { getCollectionCountBooks } from '@/app/hooks/getCollectionCountBooks'
 import { useAuthUser } from '@/app/hooks/useAuthUser'
+import { useCollectionRepository } from '@/app/hooks/useCollectionRepository'
 
 export async function GET() {
+  const { getCountBooksInCollection } = useCollectionRepository()
+
   const collections: Collection[] = [
     {
       id: 'want-read',
@@ -35,10 +37,10 @@ export async function GET() {
 
   if (user) {
     const [countWantRead, countReading, countCompleted, countDropped] = await Promise.all([
-      getCollectionCountBooks('want-read', user.id),
-      getCollectionCountBooks('currently-reading', user.id),
-      getCollectionCountBooks('completed-readings', user.id),
-      getCollectionCountBooks('dropped-readings', user.id),
+      getCountBooksInCollection('want-read', user.id),
+      getCountBooksInCollection('currently-reading', user.id),
+      getCountBooksInCollection('completed-readings', user.id),
+      getCountBooksInCollection('dropped-readings', user.id),
     ])
 
     collections[0].countBooks = countWantRead
