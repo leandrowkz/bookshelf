@@ -26,7 +26,7 @@ declare global {
 
   type RequestParamsWithId = {
     params: {
-      bookId: string
+      bookIsbn: string
       authorId: string
       categoryId: string
       collectionId: CollectionType
