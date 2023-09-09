@@ -4,6 +4,10 @@ import { useSupabase } from '@/app/hooks/useSupabase'
 import type { Book } from '@/types/Book'
 import { useAuthUser } from '@/app/hooks/useAuthUser'
 
+/**
+ * POST /api/collections/:collectionId/books/add
+ * body => { isbn: number }
+ */
 export async function POST(request: Request, { params }: RequestParamsWithId) {
   try {
     const books: Book[] = []
