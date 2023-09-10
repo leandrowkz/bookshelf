@@ -1,21 +1,23 @@
 import { NextResponse } from 'next/server'
 import { google } from '@/app/hooks/useBooksProvider'
-import { useSupabase } from '@/app/hooks/useSupabase'
 import type { Book } from '@/types/Book'
 import { useAuthUser } from '@/app/hooks/useAuthUser'
+import { useCollectionRepository } from '@/app/hooks/useCollectionRepository'
 
+/**
+ * Get all books inside a collection, for the current user.
+ *
+ * GET /collections/:collectionId/books
+ */
 export async function GET(request: Request, { params }: RequestParamsWithId) {
   try {
     const books: Book[] = []
-    const supabase = useSupabase()
     const user = await useAuthUser()
 
     if (user) {
-      const { data } = await supabase
-        .from('users_collections')
-        .select('*')
-        .eq('collection_key', params.collectionId)
-        .eq('user_id', user.id)
+      const repository = useCollectionRepository()
+
+      const { data } = await repository.getCollectionBooks(params.collectionId, user.id)
 
       if (data) {
         await Promise.all(

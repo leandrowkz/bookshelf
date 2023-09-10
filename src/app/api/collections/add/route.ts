@@ -5,7 +5,7 @@ import { useCollectionRepository } from '@/app/hooks/useCollectionRepository'
 /**
  * Adds a book to a collection.
  *
- * POST /api/collections/:collectionId/books/add
+ * POST /api/collections/books/add
  * body => { isbn: number }
  */
 export async function POST(request: Request, { params }: RequestParamsWithId) {
