@@ -10,7 +10,7 @@ export type UserBookRow = {
   progress: Nullable<number>
   pages_read: Nullable<number>
   started_reading_at: Nullable<Date>
-  dropped_eading_at: Nullable<Date>
+  dropped_reading_at: Nullable<Date>
   completed_reading_at: Nullable<Date>
   last_progress_updated_at: Nullable<Date>
   review_created_at: Nullable<Date>
