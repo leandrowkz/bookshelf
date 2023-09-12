@@ -22,6 +22,33 @@ type BodyRequest = {
   lastProgressUpdatedAt?: Nullable<string>
 }
 
+import { z } from 'zod'
+
+const CurrentlyReadingSchema = z.object({
+  bookIsbn: z.string(),
+  collectionKey: z.literal('currently-reading'),
+  progress: z.number(),
+  pagesRead: z.number(),
+  startedReadingAt: z.date(),
+})
+
+const CompletedReadingSchema = z.object({
+  bookIsbn: z.string(),
+  collectionKey: z.literal('completed-readings'),
+  completedReadingAt: z.date(),
+})
+
+const DroppedReadingSchema = z.object({
+  bookIsbn: z.string(),
+  collectionKey: z.literal('dropped-readings'),
+  droppedReadingAt: z.date(),
+})
+
+const WantToReadSchema = z.object({
+  bookIsbn: z.string(),
+  collectionKey: z.literal('want-read'),
+})
+
 /**
  * Adds a book to a collection.
  *
