@@ -12,6 +12,7 @@ export const booksApiSlice = apiSlice.injectEndpoints({
       }),
       providesTags: ['SearchBooks'],
     }),
+
     getBookDetails: builder.query<Book, string>({
       query: (bookId: string) => `/books/${bookId}`,
       providesTags: ['BookDetails'],

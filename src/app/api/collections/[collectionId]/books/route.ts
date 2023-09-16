@@ -4,10 +4,14 @@ import type { Book } from '@/types/Book'
 import { useAuthUser } from '@/app/hooks/useAuthUser'
 import { useCollectionRepository } from '@/app/hooks/useCollectionRepository'
 
+type POSTBodyRequest = {
+  bookIsbn: string
+}
+
 /**
  * Get all books inside a collection, for the current user.
  *
- * GET /collections/:collectionId/books
+ * GET /api/collections/:collectionId/books
  */
 export async function GET(request: Request, { params }: RequestParamsWithId) {
   try {
@@ -37,5 +41,52 @@ export async function GET(request: Request, { params }: RequestParamsWithId) {
   } catch (e) {
     console.error(e)
     return NextResponse.json([])
+  }
+}
+
+/**
+ * Adds a book to a collection.
+ *
+ * POST /api/collections/:collectionId/books
+ * body => typeof POSTBodyRequest
+ */
+export async function POST(request: Request, { params }: RequestParamsWithId) {
+  try {
+    const user = await useAuthUser()
+
+    if (user) {
+      const repository = useCollectionRepository()
+      const body = (await request.json()) as POSTBodyRequest
+
+      const { bookIsbn } = body
+      const { collectionId } = params
+
+      switch (collectionId) {
+        case 'want-read':
+          await repository.addBookToWantRead(bookIsbn, user.id)
+          break
+
+        case 'currently-reading':
+          await repository.addBookToCurrentlyReading(bookIsbn, user.id)
+          break
+
+        case 'completed-readings':
+          await repository.addBookToCompletedReadings(bookIsbn, user.id)
+          break
+
+        case 'dropped-readings':
+          await repository.addBookToDroppedReadings(bookIsbn, user.id)
+          break
+
+        default:
+          throw new Error('Invalid collection')
+          break
+      }
+    }
+
+    return NextResponse.json({})
+  } catch (e) {
+    console.error(e)
+    return NextResponse.json({})
   }
 }

@@ -51,18 +51,6 @@ async function isBookInCollection(bookIsbn: string, collectionKey: CollectionTyp
   return !!data?.length
 }
 
-async function addBookToCollection(
-  bookIsbn: string,
-  collectionKey: CollectionType,
-  userId: string
-) {
-  await supabase.from('users_books').upsert({
-    book_isbn: bookIsbn,
-    user_id: userId,
-    collection_key: collectionKey,
-  })
-}
-
 async function addBookAsFavorite(bookIsbn: string, userId: string) {
   return supabase.from('users_books').upsert({
     book_isbn: bookIsbn,
@@ -103,7 +91,7 @@ async function removeBookReview(bookIsbn: string, userId: string) {
   })
 }
 
-async function setBookAsStartReading(bookIsbn: string, userId: string) {
+async function addBookToCurrentlyReading(bookIsbn: string, userId: string) {
   return supabase.from('users_books').upsert({
     book_isbn: bookIsbn,
     user_id: userId,
@@ -112,7 +100,16 @@ async function setBookAsStartReading(bookIsbn: string, userId: string) {
   })
 }
 
-async function setBookReadingProgress(
+async function addBookToDroppedReadings(bookIsbn: string, userId: string) {
+  return supabase.from('users_books').upsert({
+    book_isbn: bookIsbn,
+    user_id: userId,
+    collection_key: 'dropped-readings',
+    dropped_reading_at: new Date(),
+  })
+}
+
+async function updateBookReadingProgress(
   bookIsbn: string,
   userId: string,
   progress: number,
@@ -128,16 +125,7 @@ async function setBookReadingProgress(
   })
 }
 
-async function setBookAsDroppedReading(bookIsbn: string, userId: string) {
-  return supabase.from('users_books').upsert({
-    book_isbn: bookIsbn,
-    user_id: userId,
-    collection_key: 'dropped-readings',
-    dropped_reading_at: new Date(),
-  })
-}
-
-async function setBookAsCompletedReading(bookIsbn: string, userId: string) {
+async function addBookToCompletedReadings(bookIsbn: string, userId: string) {
   return supabase.from('users_books').upsert({
     book_isbn: bookIsbn,
     user_id: userId,
@@ -146,17 +134,25 @@ async function setBookAsCompletedReading(bookIsbn: string, userId: string) {
   })
 }
 
+async function addBookToWantRead(bookIsbn: string, userId: string) {
+  return supabase.from('users_books').upsert({
+    book_isbn: bookIsbn,
+    user_id: userId,
+    collection_key: 'want-read',
+  })
+}
+
 export const useCollectionRepository = () => ({
   addBookAsFavorite,
   addBookReview,
-  addBookToCollection,
+  addBookToCompletedReadings,
+  addBookToCurrentlyReading,
+  addBookToDroppedReadings,
+  addBookToWantRead,
   getCollectionBooks,
   getCountBooksInCollection,
   isBookInCollection,
   removeBookAsFavorite,
   removeBookReview,
-  setBookAsCompletedReading,
-  setBookAsStartReading,
-  setBookAsDroppedReading,
-  setBookReadingProgress,
+  updateBookReadingProgress,
 })

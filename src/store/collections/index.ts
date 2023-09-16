@@ -7,6 +7,14 @@ export const collectionsApiSlice = apiSlice.injectEndpoints({
       query: (collectionId: CollectionType) => `/collections/${collectionId}`,
       providesTags: ['CollectionDetails'],
     }),
+
+    addBookToCollection: builder.mutation({
+      query: ({ collectionId, bookIsbn }) => ({
+        url: `/collections/${collectionId}/books`,
+        method: 'POST',
+        body: { bookIsbn },
+      }),
+    }),
   }),
 })
 

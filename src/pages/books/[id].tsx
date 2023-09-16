@@ -76,7 +76,7 @@ export default function Page() {
   return (
     <Layout>
       <Flex gap="xl">
-        <Flex direction="column" gap="theme.spacing.lg">
+        <Flex direction="column" gap="theme.spacing.lg" w="40%">
           <BookCover book={book} radius="lg" />
           <Flex direction="column" gap="md">
             <Menu shadow="md" width="target">
@@ -84,6 +84,7 @@ export default function Page() {
                 <Button
                   h={70}
                   size="lg"
+                  mt="lg"
                   variant="default"
                   leftIcon={
                     <Avatar color="violet">
