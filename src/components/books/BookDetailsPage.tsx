@@ -1,33 +1,8 @@
 import { Layout } from '@/components'
 import { useGetBookDetailsQuery, useGetUserBookInfoQuery } from '@/store/books'
-import {
-  ActionIcon,
-  Avatar,
-  Badge,
-  Box,
-  Button,
-  Flex,
-  Group,
-  Menu,
-  Progress,
-  Spoiler,
-  Text,
-  Title,
-} from '@mantine/core'
+import { Flex } from '@mantine/core'
 import { useRouter } from 'next/router'
 import { BookCover } from '@/components/BookCover/BookCover'
-import { useHelpers } from '@/hooks/useHelpers'
-import {
-  IconBookOff,
-  IconBooks,
-  IconChecks,
-  IconHeart,
-  IconPlayerPlay,
-  IconPlus,
-} from '@tabler/icons-react'
-import { DataList } from '@/components/DataList/DataList'
-import { BookCarousel } from '@/components/BookCarousel/BookCarousel'
-import { useMockData } from '../../../test-utils/hooks/useMockData'
 import { BookDetailsCollectionInfoSection } from './BookDetailsCollectionInfoSection'
 import { BookDetailsInfoSection } from './BookDetailsInfoSection'
 import { BookDetailsRecommendationsSection } from './BookDetailsRecommendationsSection'
@@ -42,11 +17,7 @@ export function BookDetailsPage() {
     isError: isErrorBookDetails,
   } = useGetBookDetailsQuery(bookId)
 
-  const {
-    data: bookUserInfo,
-    isLoading: isLoadingBookUserInfo,
-    isError: isErrorBookUserInfo,
-  } = useGetUserBookInfoQuery(bookId)
+  const { data: bookUserInfo, isLoading: isLoadingBookUserInfo } = useGetUserBookInfoQuery(bookId)
 
   if (isLoadingBookDetails) {
     return 'Loading books...'
