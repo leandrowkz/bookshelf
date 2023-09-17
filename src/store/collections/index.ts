@@ -18,4 +18,4 @@ export const collectionsApiSlice = apiSlice.injectEndpoints({
   }),
 })
 
-export const { useGetCollectionDetailsQuery } = collectionsApiSlice
+export const { useGetCollectionDetailsQuery, useAddBookToCollectionMutation } = collectionsApiSlice
