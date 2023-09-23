@@ -5,7 +5,7 @@ import { useAuthUser } from '@/app/hooks/useAuthUser'
 export async function GET(request: Request, { params }: RequestParamsWithId) {
   const user = await useAuthUser()
 
-  const { review } = await getUserBookInfo(String(user?.id), params.bookId)
+  const userBookInfo = await getUserBookInfo(String(user?.id), params.bookId)
 
-  return NextResponse.json(review)
+  return NextResponse.json(userBookInfo)
 }
