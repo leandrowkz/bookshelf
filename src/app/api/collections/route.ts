@@ -37,10 +37,10 @@ export async function GET() {
 
   if (user) {
     const [countWantRead, countReading, countCompleted, countDropped] = await Promise.all([
-      getCountBooksInCollection('want-read', user.id),
-      getCountBooksInCollection('currently-reading', user.id),
-      getCountBooksInCollection('completed-readings', user.id),
-      getCountBooksInCollection('dropped-readings', user.id),
+      getCountBooksInCollection({ collectionKey: 'want-read', userId: user.id }),
+      getCountBooksInCollection({ collectionKey: 'currently-reading', userId: user.id }),
+      getCountBooksInCollection({ collectionKey: 'completed-readings', userId: user.id }),
+      getCountBooksInCollection({ collectionKey: 'dropped-readings', userId: user.id }),
     ])
 
     collections[0].countBooks = countWantRead

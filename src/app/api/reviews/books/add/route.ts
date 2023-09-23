@@ -1,4 +1,3 @@
-import type { Review } from '@/types/Review'
 import { NextResponse } from 'next/server'
 import { useAuthUser } from '@/app/hooks/useAuthUser'
 import { useCollectionRepository } from '@/app/hooks/useCollectionRepository'
@@ -17,14 +16,18 @@ export async function POST(request: Request) {
       const repository = useCollectionRepository()
       const body = await request.json()
 
-      const review: Review = {
-        rating: Number(body.review.rating),
-        recommend: Boolean(body.review.recommend),
-        title: body.review.title,
-        description: body.review.description,
+      const data = {
+        userId: user.id,
+        bookIsbn: body.bookIsbn,
+        review: {
+          rating: Number(body.review.rating),
+          recommend: Boolean(body.review.recommend),
+          title: body.review.title,
+          description: body.review.description,
+        },
       }
 
-      await repository.addBookReview(String(body.bookIsbn), user.id, review)
+      await repository.addBookReview(data)
     }
 
     return NextResponse.json({ success: true })

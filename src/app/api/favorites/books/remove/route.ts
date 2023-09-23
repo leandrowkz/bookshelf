@@ -16,7 +16,7 @@ export async function POST(request: Request) {
       const repository = useCollectionRepository()
       const body = await request.json()
 
-      await repository.removeBookAsFavorite(String(body.bookIsbn), user.id)
+      await repository.removeBookAsFavorite({ bookIsbn: String(body.bookIsbn), userId: user.id })
     }
 
     return NextResponse.json({ success: true })

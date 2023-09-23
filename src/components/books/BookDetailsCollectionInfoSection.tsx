@@ -109,7 +109,7 @@ export function BookDetailsCollectionInfoSection({
 
 function getDataBasedOnCollectionInfo(bookCollectionInfo: UserBookInfo) {
   const data = {
-    collection: bookCollectionInfo.collection,
+    collection: bookCollectionInfo.collectionKey,
     title: '',
     description: '',
     icon: <></>,
@@ -121,7 +121,7 @@ function getDataBasedOnCollectionInfo(bookCollectionInfo: UserBookInfo) {
     },
   }
 
-  switch (bookCollectionInfo.collection?.toLowerCase()) {
+  switch (bookCollectionInfo.collectionKey?.toLowerCase()) {
     case 'want-read':
       data.title = 'In your reading list'
       data.description = 'Ready to start this book? Just click on the button down below.'
