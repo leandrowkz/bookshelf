@@ -9,6 +9,7 @@ import {
   Menu,
   Progress,
   Text,
+  LoadingOverlay,
 } from '@mantine/core'
 import {
   IconBookOff,
@@ -31,7 +32,7 @@ export function BookDetailsCollectionInfoSection({
   ...props
 }: BookCollectionInfoSectionProps) {
   if (isLoading) {
-    return 'Loading...'
+    return <LoadingOverlay visible overlayBlur={2} />
   }
 
   if (!bookCollectionInfo) {

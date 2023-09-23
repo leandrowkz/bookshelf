@@ -1,6 +1,6 @@
 import { Layout } from '@/components'
 import { useGetBookDetailsQuery, useGetUserBookInfoQuery } from '@/store/books'
-import { Flex } from '@mantine/core'
+import { Flex, LoadingOverlay, Title } from '@mantine/core'
 import { useRouter } from 'next/router'
 import { BookCover } from '@/components/BookCover/BookCover'
 import { BookDetailsCollectionInfoSection } from './BookDetailsCollectionInfoSection'
@@ -20,9 +20,9 @@ export function BookDetailsPage() {
   const { data: bookUserInfo, isLoading: isLoadingBookUserInfo } = useGetUserBookInfoQuery(bookId)
 
   if (isLoadingBookDetails) {
-    return 'Loading books...'
+    return <LoadingOverlay visible overlayBlur={2} />
   } else if (isErrorBookDetails || !book) {
-    return 'An error occurred'
+    return <Title>An error occurred</Title>
   }
 
   return (

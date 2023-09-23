@@ -18,7 +18,9 @@ export async function getUserBookInfo(userId: string, bookId: string): Promise<U
   }
 
   return {
-    collection: null,
+    userId: null,
+    bookIsbn: null,
+    collectionKey: null,
     startedReadingAt: null,
     droppedReadingAt: null,
     completedReadingAt: null,
