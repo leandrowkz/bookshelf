@@ -63,7 +63,7 @@ export function DiscoverBooksSection() {
           {categories.map((category, i) => (
             <Flex key={`category-action-${category.label}-${i}`} direction="column" gap="sm">
               <Button variant={i === 0 ? 'outline' : 'light'} h={100} w={100} radius="lg">
-                <Text size={32}>{category.icon}</Text>
+                <Text size="sm">{category.icon}</Text>
               </Button>
               <Text ta="center" c="dimmed">
                 {category.label}

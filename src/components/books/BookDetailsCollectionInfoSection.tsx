@@ -32,7 +32,7 @@ export function BookDetailsCollectionInfoSection({
   ...props
 }: BookCollectionInfoSectionProps) {
   if (isLoading) {
-    return <LoadingOverlay visible overlayBlur={2} />
+    return <LoadingOverlay visible overlayProps={{ blur: 2 }} />
   }
 
   if (!bookCollectionInfo) {
@@ -50,7 +50,7 @@ export function BookDetailsCollectionInfoSection({
             size="lg"
             mt="lg"
             variant="default"
-            leftIcon={
+            leftSection={
               <Avatar color="violet">
                 <IconPlus />
               </Avatar>
@@ -64,16 +64,16 @@ export function BookDetailsCollectionInfoSection({
           <Menu.Label>
             <Text size="sm">My collection</Text>
           </Menu.Label>
-          <Menu.Item icon={<IconBooks />}>Want to read</Menu.Item>
-          <Menu.Item icon={<IconPlayerPlay color="blue" />}>Currently reading</Menu.Item>
-          <Menu.Item icon={<IconChecks color="green" />}>Completed readings</Menu.Item>
-          <Menu.Item icon={<IconBookOff color="orange" />}>Dropped readings</Menu.Item>
+          <Menu.Item leftSection={<IconBooks />}>Want to read</Menu.Item>
+          <Menu.Item leftSection={<IconPlayerPlay color="blue" />}>Currently reading</Menu.Item>
+          <Menu.Item leftSection={<IconChecks color="green" />}>Completed readings</Menu.Item>
+          <Menu.Item leftSection={<IconBookOff color="orange" />}>Dropped readings</Menu.Item>
         </Menu.Dropdown>
       </Menu>
 
       <Box mt="lg">
-        <Group position="apart" mb="xs">
-          <Text weight={500}>{collectionInfo.title}</Text>
+        <Group justify="space-between" mb="xs">
+          <Text fw={500}>{collectionInfo.title}</Text>
           <Badge color={collectionInfo.color} variant="light">
             {collectionInfo.icon}
           </Badge>
@@ -98,7 +98,7 @@ export function BookDetailsCollectionInfoSection({
         </Button>
 
         {collectionInfo.collection === 'completed-readings' && (
-          <Button variant="default" fullWidth mt="md" radius="md" leftIcon={<IconHeart />}>
+          <Button variant="default" fullWidth mt="md" radius="md" leftSection={<IconHeart />}>
             Add to favorites
           </Button>
         )}

@@ -1,0 +1,77 @@
+/* https://images.unsplash.com/photo-1536411396596-afed9fa3c1b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80;
+    https://images.unsplash.com/photo-1545696648-86c761bc5410?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2948&q=80;
+    https://images.unsplash.com/photo-1550399105-c4db5fb85c18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80;
+    https://images.unsplash.com/photo-1554357395-dbdc356ca5da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80; */
+
+.root {
+  background-color: #11284b;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(https://images.unsplash.com/photo-1536411396596-afed9fa3c1b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80);
+  padding-top: var(--app-spacing-container);
+  padding-bottom: var(--app-spacing-container);
+  padding-left: var(--app-spacing-container);
+  padding-right: var(--app-spacing-container);
+  margin-left: calc(var(--app-spacing-container) * -1);
+  margin-top: calc(var(--app-spacing-container) * -1);
+  margin-bottom: var(--app-spacing-container);
+  width: calc(100% + calc(var(--app-spacing-container) * 2));
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: em(320px)) {
+    flex-direction: column;
+  }
+}
+
+.image {
+  @media (max-width: em(320px)) {
+    display: none;
+  }
+}
+
+.content {
+  padding-top: var(--app-spacing-container);
+  padding-bottom: var(--app-spacing-container);
+
+  @media (max-width: em(320px)) {
+    margin-right: 0;
+  }
+}
+
+.title {
+  color: var(--mantine-color-white);
+  font-weight: 900;
+  line-height: 1.05;
+  max-width: rem(500);
+  font-size: rem(48);
+
+  @media (max-width: em(320px)) {
+    max-width: 100%;
+    font-size: rem(34);
+    line-height: 1.15;
+  }
+}
+
+.description {
+  color: var(--mantine-color-white);
+  opacity: 0.75;
+  max-width: rem(500);
+
+  @media (max-width: em(320px)) {
+    max-width: 100%;
+  }
+}
+
+.control {
+  padding-left: rem(50);
+  padding-right: rem(50);
+  font-size: rem(22);
+
+  @media (max-width: em(320px)) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  border-bottom: 1px solid var(--mantine-color-gray-2);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--mantine-spacing-md);
+  border-bottom: 1px solid var(--mantine-color-gray-2);
+  padding-block: var(--mantine-spacing-md);
+}
+
+.itemLabel {
+  flex: 0 0 150px;
+}
+
+.itemValue {
+  flex: 1;
+}

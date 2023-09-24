@@ -1,6 +1,7 @@
 import { Text, Box, type BoxProps } from '@mantine/core'
 import type { ReactNode } from 'react'
-import { useStyles } from './DataList.styles'
+import classes from './DataList.module.css'
+import clsx from 'clsx'
 
 export type DataListProps = BoxProps & {
   list: {
@@ -11,7 +12,6 @@ export type DataListProps = BoxProps & {
 }
 
 export function DataList({ list, ...props }: DataListProps) {
-  const { classes, cx } = useStyles()
   const listItems: ReactNode[] = []
 
   list.forEach((item) => {
@@ -21,7 +21,7 @@ export function DataList({ list, ...props }: DataListProps) {
     listItems.push(
       <Box className={classes.item}>
         {item.icon || undefined}
-        <Text weight="bold" className={classes.itemLabel}>
+        <Text fw="bold" className={classes.itemLabel}>
           {label}
         </Text>
         <Text className={classes.itemValue}>{value}</Text>
@@ -30,7 +30,7 @@ export function DataList({ list, ...props }: DataListProps) {
   })
 
   return (
-    <Box {...props} className={cx(classes.list, props.className)}>
+    <Box {...props} className={clsx(classes.list, props.className)}>
       {listItems}
     </Box>
   )

@@ -1,11 +1,12 @@
-import type { ReactNode } from 'react'
+import type { PropsWithChildren, ReactNode } from 'react'
 import { Paper, Title, Text, ThemeIcon, Box, type BoxProps } from '@mantine/core'
 
-export type AuthBoxProps = BoxProps & {
-  icon?: ReactNode
-  title?: ReactNode
-  subtitle?: ReactNode
-}
+export type AuthBoxProps = BoxProps &
+  PropsWithChildren & {
+    icon?: ReactNode
+    title?: ReactNode
+    subtitle?: ReactNode
+  }
 
 export function AuthBox({ icon, title, subtitle, children, ...props }: AuthBoxProps) {
   return (
@@ -18,7 +19,7 @@ export function AuthBox({ icon, title, subtitle, children, ...props }: AuthBoxPr
         </Box>
       )}
       {title && (
-        <Title align="center" mb="xs" order={2}>
+        <Title ta="center" mb="xs" order={2}>
           {title}
         </Title>
       )}

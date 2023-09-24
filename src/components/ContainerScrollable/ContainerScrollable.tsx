@@ -1,13 +1,13 @@
+import type { PropsWithChildren } from 'react'
 import { Box, type BoxProps } from '@mantine/core'
-import { useStyles } from './ContainerScrollable.styles'
+import classes from './ContainerScrollable.module.css'
+import clsx from 'clsx'
 
-export type ContainerScrollableProps = BoxProps
+export type ContainerScrollableProps = BoxProps & PropsWithChildren
 
 export function ContainerScrollable({ children, ...props }: ContainerScrollableProps) {
-  const { classes, cx } = useStyles()
-
   return (
-    <Box {...props} className={cx(classes.container, props.className)}>
+    <Box {...props} className={clsx(classes.container, props.className)}>
       {children}
     </Box>
   )

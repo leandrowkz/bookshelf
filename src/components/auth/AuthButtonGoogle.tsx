@@ -25,7 +25,7 @@ export function AuthButtonGoogle({
     <Button
       variant="default"
       {...props}
-      leftIcon={<IconBrandGoogle />}
+      leftSection={<IconBrandGoogle />}
       onClick={handleClick}
       loading={isLoading}
     >

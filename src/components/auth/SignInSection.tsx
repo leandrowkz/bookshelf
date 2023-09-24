@@ -52,11 +52,11 @@ export function SignInSection() {
           {...form.getInputProps('password')}
         />
 
-        <Group position="apart" mt="md">
+        <Box mt="xs">
           <Anchor href="/auth/password-reset" size="sm">
             Forgot password?
           </Anchor>
-        </Group>
+        </Box>
 
         {error && (
           <Alert title="A problem occurred" color="red" mt="lg">

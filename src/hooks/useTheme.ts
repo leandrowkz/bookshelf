@@ -37,7 +37,6 @@ export function useTheme() {
     fontSizes,
     spacing,
     breakpoints,
-    lineHeight: 1.5,
     defaultRadius: 'md',
     components: {
       Button: {
@@ -71,20 +70,20 @@ export function useTheme() {
         },
       },
     },
-    globalStyles: () => ({
-      p: {
-        marginTop: 0,
-      },
-      'h1, h2, h3, h4, h5, h6': {
-        margin: 0,
-      },
-      '.mantine-Menu-item': {
-        fontSize: fontSizes.md,
-      },
-      '.mantine-Menu-label': {
-        fontSize: fontSizes.sm,
-      },
-    }),
+    // globalStyles: () => ({
+    //   p: {
+    //     marginTop: 0,
+    //   },
+    //   'h1, h2, h3, h4, h5, h6': {
+    //     margin: 0,
+    //   },
+    //   '.mantine-Menu-item': {
+    //     fontSize: fontSizes.md,
+    //   },
+    //   '.mantine-Menu-label': {
+    //     fontSize: fontSizes.sm,
+    //   },
+    // }),
     other: {
       headerHeight: rem(90),
       spacing: {

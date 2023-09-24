@@ -20,7 +20,7 @@ export function BookDetailsPage() {
   const { data: bookUserInfo, isLoading: isLoadingBookUserInfo } = useGetUserBookInfoQuery(bookId)
 
   if (isLoadingBookDetails) {
-    return <LoadingOverlay visible overlayBlur={2} />
+    return <LoadingOverlay visible overlayProps={{ blur: 2 }} />
   } else if (isErrorBookDetails || !book) {
     return <Title>An error occurred</Title>
   }

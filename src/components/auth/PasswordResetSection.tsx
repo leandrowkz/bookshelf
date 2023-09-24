@@ -1,13 +1,12 @@
 import { ResultBox } from '@/components/ResultBox/ResultBox'
 import { useAuthPasswordReset } from '@/hooks/useAuthPasswordReset'
-import { TextInput, Button, Group, Anchor, Center, Box, rem, Alert } from '@mantine/core'
+import { TextInput, Button, Group, Anchor, Center, Box, Alert } from '@mantine/core'
 import { IconArrowLeft, IconLockQuestion, IconMailForward } from '@tabler/icons-react'
 import { AuthBox } from './AuthBox'
 import { useRouter } from 'next/router'
-import { useStyles } from './PasswordResetSection.styles'
+import classes from './PasswordResetSection.module.css'
 
 export function PasswordResetSection() {
-  const { classes } = useStyles()
   const router = useRouter()
   const { form, error, isLoading, isSuccess, handlePasswordReset } = useAuthPasswordReset()
 
@@ -50,10 +49,10 @@ export function PasswordResetSection() {
           </Alert>
         )}
 
-        <Group position="apart" mt="lg" className={classes.controls}>
+        <Group justify="space-between" mt="lg" className={classes.controls}>
           <Anchor color="dimmed" size="sm" className={classes.control} href="/auth/sign-in">
             <Center inline>
-              <IconArrowLeft size={rem(12)} stroke={1.5} />
+              <IconArrowLeft stroke={1.5} />
               <Box ml={5}>Back to the login page</Box>
             </Center>
           </Anchor>

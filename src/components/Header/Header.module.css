@@ -1,0 +1,65 @@
+.mantineHeader {
+  height: var(--app-header-height);
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: var(--app-spacing-container);
+  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-black));
+  border-bottom: 1px solid var(--mantine-color-gray-2);
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--app-header-height);
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: em(320px)) {
+    justify-content: flex-start;
+  }
+}
+
+.links {
+  @media (max-width: em(320px)) {
+    display: none;
+  }
+}
+
+.social {
+  @media (max-width: em(320px)) {
+    width: auto;
+    margin-left: auto;
+  }
+}
+
+.burger {
+  margin-right: var(--mantine-spacing-md);
+
+  @media (min-width: em(320px)) {
+    display: none;
+  }
+}
+
+.link {
+  display: block;
+  line-height: 1;
+  padding: rem(8) rem(12);
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  color: light-dark(var(--mantine-color-dark-0), var(--mantine-color-gray-7));
+  font-weight: 500;
+
+  &:hover {
+    background: light-dark(var(--mantine-color-dark-6), var(--mantine-color-gray-0));
+  }
+}
+
+/* .linkActive, .linkActive:hover {
+  background-color: theme.fn.variant({ variant: light; color: theme.primaryColor }).background;
+  color: theme.fn.variant({ variant: light; color: theme.primaryColor }).color;
+} */

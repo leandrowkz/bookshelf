@@ -1,0 +1,8 @@
+.logo, .logo:visited, .logo:hover, .logo:active {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  text-decoration: none;
+}
+
+.icon {
+  color: var(--mantine-color-violet-8);
+}

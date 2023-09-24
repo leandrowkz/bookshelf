@@ -1,10 +1,9 @@
 import { Title, Text, Button, TextInput, Box } from '@mantine/core'
 import { IconSearch } from '@tabler/icons-react'
 import { useState } from 'react'
-import { useStyles } from './HomeHero.styles'
+import classes from './HomeHero.module.css'
 
 export function HomeHero() {
-  const { classes } = useStyles()
   const [search, setSearch] = useState('')
 
   return (
@@ -27,13 +26,13 @@ export function HomeHero() {
           <Text className={classes.description} my="lg" size="lg">
             Search through millions of books, save them in your lists, control your reading
             progress, and challenge yourself with reading challenges.{' '}
-            <Text weight="bold" span>
+            <Text fw="bold" span>
               All that for free.
             </Text>
           </Text>
 
           <TextInput
-            icon={<IconSearch />}
+            leftSection={<IconSearch />}
             value={search}
             size="xl"
             placeholder="Book title, author..."

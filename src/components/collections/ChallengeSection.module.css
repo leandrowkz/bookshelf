@@ -1,0 +1,19 @@
+.card {
+  position: relative;
+  overflow: visible;
+  padding: var(--mantine-spacing-lg);
+  padding-top: var(--mantine-spacing-xl);
+  background: var(--mantine-color-violet-9);
+  /* backgroundImage: theme.fn.gradient({ from: dark; to: violet; deg: 45 }); */
+  color: var(--mantine-color-white);
+}
+
+.icon {
+  position: absolute;
+  top: calc(rem(50) / 3);
+  left: calc(50% - rem(50) / 2);
+}
+
+.title {
+  line-height: 1;
+}

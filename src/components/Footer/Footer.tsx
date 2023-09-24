@@ -1,11 +1,10 @@
 import { Text, Group, Box, Anchor } from '@mantine/core'
 import { IconBrandTwitter, IconBrandLinkedin, IconBrandGithub } from '@tabler/icons-react'
 import { useMenuLinks } from '@/hooks/useMenuLinks'
-import { useStyles } from './Footer.styles'
+import classes from './Footer.module.css'
 import { BookshelfLogo } from '../BookshelfLogo/BookshelfLogo'
 
 export function Footer() {
-  const { classes } = useStyles()
   const { footer } = useMenuLinks()
 
   const groups = footer.map((group) => {
@@ -46,7 +45,7 @@ export function Footer() {
           <Anchor href="https://github.com/leandrowkz">@leandrowkz</Anchor>.
         </Text>
 
-        <Group spacing="sm" className={classes.social} position="right" noWrap>
+        <Group gap="sm" className={classes.social} wrap="nowrap">
           <Anchor href="https://github.com/leandrowkz" target="_blank" data-testid="icon-github">
             <IconBrandGithub size="1.05rem" stroke={1.5} />
           </Anchor>

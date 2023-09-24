@@ -1,15 +1,13 @@
 import { Anchor, Flex, Text } from '@mantine/core'
-import { useStyles } from './BookshelfLogo.styles'
+import styles from './BookshelfLogo.module.css'
 import { IconBooks } from '@tabler/icons-react'
 
 export function BookshelfLogo() {
-  const { classes, theme } = useStyles()
-
   return (
-    <Anchor href="/" className={classes.link} data-testid="logo">
-      <Text weight={700} size="xl">
+    <Anchor href="/" className={styles.logo} data-testid="logo">
+      <Text fw={700} size="xl">
         <Flex align="center" gap="xs">
-          <IconBooks color={theme.colors.violet[8]} />
+          <IconBooks className={styles.icon} />
           Bookshelf
         </Flex>
       </Text>

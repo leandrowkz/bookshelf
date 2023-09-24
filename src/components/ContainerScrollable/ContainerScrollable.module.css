@@ -1,0 +1,8 @@
+
+.container {
+  box-sizing: border-box;
+  margin-left: calc(var(--app-spacing-container) * -1);
+  width: calc(100vw + var(--app-spacing-container));
+  padding-left: var(--app-spacing-container);
+  overflow: auto;
+}

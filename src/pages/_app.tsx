@@ -2,27 +2,21 @@ import { useState } from 'react'
 import { Provider } from 'react-redux'
 import NextApp, { type AppProps, type AppContext } from 'next/app'
 import Head from 'next/head'
-import { getCookie, setCookie } from 'cookies-next'
-import { MantineProvider, type ColorScheme, ColorSchemeProvider } from '@mantine/core'
+import { getCookie } from 'cookies-next'
 import { Notifications } from '@mantine/notifications'
 import { createPagesBrowserClient } from '@supabase/auth-helpers-nextjs'
 import { SessionContextProvider } from '@supabase/auth-helpers-react'
-import { useTheme } from '@/hooks/useTheme'
 import { wrapper } from '@/store'
+import {
+  AppThemeProvider,
+  ColorSchemeScript,
+} from '@/components/ui/AppThemeProvider/AppThemeProvider'
 
-export default function App(props: AppProps & { colorScheme: ColorScheme }) {
+export default function App(props: AppProps) {
   const { Component } = props
-  const { theme } = useTheme()
   const { store, props: storeProps } = wrapper.useWrappedStore(props)
   const { pageProps } = storeProps
-  const [colorScheme, setColorScheme] = useState<ColorScheme>(props.colorScheme)
   const [supabaseClient] = useState(() => createPagesBrowserClient())
-
-  const toggleColorScheme = (value?: ColorScheme) => {
-    const nextColorScheme = value || (colorScheme === 'dark' ? 'light' : 'dark')
-    setColorScheme(nextColorScheme)
-    setCookie('mantine-color-scheme', nextColorScheme, { maxAge: 60 * 60 * 24 * 30 })
-  }
 
   return (
     <>
@@ -30,6 +24,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <title>Mantine next example</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <link rel="shortcut icon" href="/favicon.svg" />
+        <ColorSchemeScript />
       </Head>
 
       <SessionContextProvider
@@ -37,12 +32,10 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         initialSession={pageProps.initialSession}
       >
         <Provider store={store}>
-          <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-            <MantineProvider theme={{ colorScheme, ...theme }} withGlobalStyles withNormalizeCSS>
-              <Component {...pageProps} />
-              <Notifications />
-            </MantineProvider>
-          </ColorSchemeProvider>
+          <AppThemeProvider>
+            <Component {...pageProps} />
+            <Notifications />
+          </AppThemeProvider>
         </Provider>
       </SessionContextProvider>
     </>
