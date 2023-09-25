@@ -1,0 +1,18 @@
+.carousel {
+  & .mantine-Carousel-viewport {
+    padding-left: var(--mantine-spacing-xl);
+  }
+
+  & .mantine-Carousel-controls {
+    padding-left: calc(var(--mantine-spacing-lg) * 1.8);
+  }
+}
+
+.cover {
+  aspect-ratio: 1.5/1;
+}
+
+.wrapper {
+  margin-left: calc(var(--mantine-spacing-xl) * -1);
+  width: calc(100% + calc(var(--mantine-spacing-xl) * 2));
+}

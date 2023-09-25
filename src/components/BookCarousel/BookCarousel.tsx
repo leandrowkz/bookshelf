@@ -17,8 +17,8 @@ export function BookCarousel({ books, ...props }: BookCarouselProps) {
     <Box className={classes.wrapper}>
       <Carousel
         {...props}
-        slideSize="15%"
-        slideGap="lg"
+        slideSize={{ base: '33%', sm: '50%', md: '33.333333%' }}
+        slideGap={{ base: 0, sm: 'md' }}
         align="start"
         slidesToScroll={mobile ? 1 : undefined}
         controlSize={40}

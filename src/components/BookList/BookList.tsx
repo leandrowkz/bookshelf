@@ -10,7 +10,7 @@ export function BookList({ books, ...props }: BookListProps) {
   return (
     <Grid {...props} gutter="lg">
       {books.map((book) => (
-        <Grid.Col key={`book-${book.id}`} xs={4} lg={2}>
+        <Grid.Col key={`book-${book.id}`} span={{ xs: 4, lg: 2 }}>
           <BookItem book={book} />
         </Grid.Col>
       ))}
