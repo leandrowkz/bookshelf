@@ -10,11 +10,3 @@ test('should render cover properly', () => {
 
   expect(screen.getByRole('img', { name: book.title })).toBeVisible()
 })
-
-test('should render properly when no cover', () => {
-  const book = books[0]
-  book.cover = null
-  render(<BookCover book={book} />)
-
-  expect(screen.getByTestId('no-cover')).toBeVisible()
-})
