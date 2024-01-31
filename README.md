@@ -1,4 +1,4 @@
-# 📚 Bookshelf
+# 📚 Bookshelf (WIP 🚧)
 Bookshelf is an opensource books catalog, where users can favorite their books, mark as read or add them to a want to read list. Take a look at this project running on https://usebookshelf.app (or https://bookshelf.guide).
 
 <!-- ![Movieshelf showcase](./docs/movieshelf.jpeg) -->
@@ -13,17 +13,14 @@ should be similar to the running website.
 This project relies on [Vercel](https://vercel.com), especially for proxying api calls.
 So before you start you'll need to [create a Vercel project](https://vercel.com/new) and attach it
 to this repository (the copy you made it). You can use it the [Vercel CLI](https://vercel.com/docs/cli)
-to do so. After creating and linking a Vercel project to the copy of this repository you need to
-create an TMDB apikey and set it on your vercel project.
+to do so.
 
 The steps you need to run this locally:
 1. Install the [Vercel CLI](https://vercel.com/docs/cli)
 2. Create a [new Vercel project](https://vercel.com/new)
 3. Run `$ vercel link` to link your copied repository to your vercel created project
-4. Create a [TMDB apikey](https://developers.themoviedb.org/3/getting-started/introduction)
-5. Add the variable `REACT_APP_TMDB_API_ACCESS_TOKEN` to your Vercel project, with the value of TDMB apikey
-6. Run `$ yarn` to install dependencies
-7. Run `$ yarn start:dev` to start the project
+4. Run `$ yarn` to install dependencies
+5. Run `$ yarn start:dev` to start the project
 
 If everything went right then you will have the project running on the http://localhost:3000.
 
