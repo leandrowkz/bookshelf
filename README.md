@@ -4,7 +4,10 @@ Bookshelf is an opensource books catalog, where you can favorite your books, mar
 <!-- ![Movieshelf showcase](./docs/movieshelf.jpeg) -->
 
 ## 📦 Dependencies
-This project uses NextJS, Redux, and Mantine UI.
+- React
+- NextJS
+- Redux
+- Mantine UI
 
 ## ⏭️ Running locally
 Since this is an free project, you're able to clone this repository and run it locally. The outcome
